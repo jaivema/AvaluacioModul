@@ -15,5 +15,3 @@
     Durante el proceso de algoritmo `diffing`, React compara los dos árboles `VDOM`, **nodo por nodo** , y determina qué nodos han cambiado, agregado o eliminado. Luego, una vez identificados los cambios necesarios, `Reconciler`los aplica al DOM real, actualizando selectivamente solo los elementos afectados.
 
     Esto garantiza que el **DOM del navegador real refleje con precisión el estado del nuevo componente** . Luego, el contenido actualizado se muestra en la pantalla. Al utilizar este enfoque, React optimiza el rendimiento minimizando las interacciones directas con el DOM del navegador y actualizando solo las partes necesarias.
-
-

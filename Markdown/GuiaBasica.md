@@ -68,7 +68,7 @@ De los editores presentados en la tabla de arriba, el único que se clasifica co
 
 ## Escribiendo en Markdown:
 
-Ahora que has escogido e instalado un editor (o si decidiste practicar en texto plano), vamos a ver los comandos básicos:
+https://github.com/marktext/marktext/raw/develop/docs/marktext.png?raw=trueAhora que has escogido e instalado un editor (o si decidiste practicar en texto plano), vamos a ver los comandos básicos:
 
 ### Títulos:
 

@@ -6,9 +6,9 @@ Una API abierta significa que está disponible públicamente y que los desarroll
 
 `REST (Representational State Transfer)`es un estilo arquitectónico de software para crear servicios web. Se basa en HTTP (Protocolo de transferencia de hipertexto) y se usa comúnmente para crear API. Una **API RESTful** permite que diferentes aplicaciones de software se comuniquen entre sí **mediante métodos HTTP como GET, POST, PUT y DELETE para acceder y manipular datos.**
 
-#### **[openlibrary.org](https://openlibrary.org/)**
+[openlibrary.org](https://openlibrary.org/)
 
-<img title="Open Library" src="file:///home/jaime/MyProjects/Documents/DAW/APIRest/assets/openlibrary-logo.svg" alt="Open Library API es una RESTful API que proporciona acceso a los datos almacenados en el proyecto Open Library." width="308" data-align="left">
+<img title="Open Library" src="assets/openlibrary-logo.svg" alt="Open Library API es una RESTful API que proporciona acceso a los datos almacenados en el proyecto Open Library." width="308" data-align="left">
 
 El proyecto Open Library tiene como objetivo crear una página web para cada libro jamás publicado. La API permite a los desarrolladores recuperar información sobre libros, autores, temas y más.
 
@@ -44,11 +44,11 @@ El proyecto Open Library tiene como objetivo crear una página web para cada lib
 
 1. Vite + React `npm create vite@latest`. Creo que como es la primera vez que inicio el vite me pide instalar el paquete con la versión 5.2.0 Imgino que es el la versión latest stable.
    
-   ![npmcreatevire.png](/home/jaime/MyProjects/Documents/DAW/APIRest/assets/npmcreatevire.png)
+   ![npmcreatevire.png](assets/npmcreatevire.png)
 
 2. JavaScript + SWC.
    
-   ![swc.png](/home/jaime/MyProjects/Documents/DAW/APIRest/assets/swc.png)
+   ![swc.png](assets/swc.png)
 
 3. Instalo las dependencias de React con `npm install` y las de Axios con `npm install axios`.
 
@@ -64,7 +64,7 @@ Y ya tengo todo listo, la esctructura de carpetas se muestra así:
 
 <img title="" src="file:///home/jaime/MyProjects/Documents/DAW/APIRest/assets/treefolders.png" alt="treefolders.png" data-align="left" width="169">
 
-#### *main.jsx*
+#### main.jsx
 
 Es la entrada a la aplicación. La ruta se lee desde el index.html > main.jsx > App.jsx (este llamará al componente <BookList />) y todo vuelve hasta renderizar el id root que existe en el body de index.html.
 
@@ -169,7 +169,7 @@ Y ahora ya si, inicio la aplicación con `npm run dev`.
 
 He colocado algún estilo a mi gusto.
 
-<img title="" src="file:///home/jaime/MyProjects/Documents/DAW/APIRest/assets/portadamiaplicacion.png" alt="portadamiaplicacion.png" data-align="center" width="381">
+<img title="" src="file:///home/jaime/MyProjects/Documents/DAW/APIRest/assets/portadamiaplicacion.png" alt="portadamiaplicacion.png" data-align="center" width="381">/home/jaime/MyProjects/Documents/DAW/APIRest/
 
 ```javascript
         <section>
