@@ -8,7 +8,7 @@
 
     En lugar de manipular el DOM del navegador directamente, React crea un DOM virtual en la memoria, donde realiza todas las manipulaciones necesarias antes de realizar los cambios en el archivo real DOM del navegador. Esto abstrae la manipulación de atributos, el manejo de eventos y la actualización manual de DOM, que de otro modo tendría que usar para crear su aplicación.
 
-![virtual-dom.png](/home/jaime/MyProjects/Documents/DAW/Reactjs/assets/virtual-dom.png)
+![virtual-dom.png](assets/virtual-dom.png)
 
 >     *El DOM virtual `VDOM`es una representación ligera en memoria del DOM real, con una estructura en forma de árbol y una jerarquía de objetos de nodo que corresponde a la estructura del DOM.* 
 
