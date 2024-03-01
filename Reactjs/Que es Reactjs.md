@@ -188,6 +188,4 @@ export default function Profile() {
 
 1. <mark>**Cree**</mark> un nuevo archivo JS para colocar los componentes.
 2. **<mark>Exporte</mark>** su componente de función desde ese archivo (usando exportaciones [predeterminadas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_the_default_export) o [con nombre](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/export#using_named_exports) ).
-3. ```
-   **<mark>Importarlo</mark>** en el archivo donde usará el componente (usando la técnica correspondiente para importar exportaciones [predeterminadas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#importing_defaults) o [con nombre](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#import_a_single_export_from_a_module) ).
-   ```
+3. **<mark>Importarlo</mark>** en el archivo donde usará el componente (usando la técnica correspondiente para importar exportaciones [predeterminadas](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#importing_defaults) o [con nombre](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/import#import_a_single_export_from_a_module) ).

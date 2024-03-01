@@ -51,15 +51,30 @@ sequenceDiagram
 
     El comando asocia su repositorio Git local con el repositorio GitHub que creó anteriormente. Esto le permite enviar sus confirmaciones locales al repositorio remoto en GitHub.
 
-> **git remote -v** Lista el fetch y el push origin.
+> **git remothttps://github.com/user/newurl.gite -v** Lista el fetch y el push origin del remoto vinculado.
 > 
-> **git remote set-url origin** https://github.com/user/newurl.git Actualiza la url de origen.
+>     origin    `https://github.com/user/url.git `(fetch)
+>     origin    `https://github.com/user/url.git` (push)
+> 
+> **git remote set-url origin https://github.com/user/newurl.git** Actualiza la url de origen.
+
+**git status**
+
+    Verifica el estado de los cambios en el stage.
+
+**git log**
+
+    Muestra un registro de los commits realizados en un repositorio cronológicamente desde el comit más reciente.
 
 **git ls-remote**
 
     Enumera todas las referencias en el repositorio remoto, incluidas las sucursales. **git remote show [remote_name]**
 
     Muestra información sobre el control remoto especificado, incluidas las sucursales remotas.
+
+**git remove origin**
+
+    Se suele ejecutar después de resolver un clone de otro repositorio *ajeno*. Desvincula del remoto descargado
 
 **git commit**
 
