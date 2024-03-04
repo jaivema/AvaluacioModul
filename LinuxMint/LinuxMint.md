@@ -45,7 +45,7 @@ Postinstalación
 
 [GParted](https://gparted.org/) se erige como una formidable herramienta de partición de discos en el ecosistema Linux y ofrece a los usuarios una solución sólida y fácil de usar para administrar particiones de discos en sus sistemas. Con su naturaleza de código abierto y una amplia gama de funciones, GParted se ha convertido en una herramienta de referencia tanto para principiantes como para usuarios experimentados que buscan una gestión eficiente del disco.
 
-![gparted-main-window.png](/home/jaime/MyProjects/Documents/DAW/Preparativos/assets/gparted-main-window.png)
+![gparted-main-window.png](assets/gparted-main-window.png)
 
 Características de GParted:
 
