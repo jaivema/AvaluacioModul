@@ -1,6 +1,6 @@
 # Definir un componente
 
- Existen dos tipos diferentes de `default` y `named`:
+ Existen dos tipos diferentes de exporación de componentes, `default` y `named`:
 
     a)    Default    
 

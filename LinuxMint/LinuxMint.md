@@ -1,8 +1,10 @@
+# INSTALACIÓN DE LINUX MINT
+
 [Linux Mint Installation Guide &mdash; Linux Mint Installation Guide documentation](https://linuxmint-installation-guide.readthedocs.io/en/latest/index.html)
 
 Linux Mint viene en forma de una imagen ISO (un archivo .iso) que se puede usar para crear un DVD de arranque o una memoria USB de arranque.
 
-Elige la edición correcta
+###### Elige la edición correcta:
 
 Puede descargar Linux Mint desde el [sitio web de Linux Mint](https://linuxmint.com/download.php) .
 
@@ -16,36 +18,46 @@ Linux Mint viene en 3 versiones diferentes, cada una con un entorno de escritori
 | MATE     | Un escritorio más tradicional y más rápido                     |
 | Xfce     | El escritorio más liviano                                      |
 
-La versión más popular de Linux Mint es la edición Cinnamon. Cinnamon está desarrollado principalmente para y por Linux Mint. Es elegante, hermoso y está lleno de nuevas funciones.
+    La versión más popular de Linux Mint es la edición Cinnamon. Cinnamon está desarrollado principalmente para y por Linux Mint. Es elegante, hermoso y está lleno de nuevas funciones.
 
-Linux Mint también participa en el desarrollo de MATE, un entorno de escritorio clásico que es la continuación de GNOME 2, el escritorio predeterminado de Linux Mint entre 2006 y 2011. Aunque echa de menos algunas características y su desarrollo es más lento que el de Cinnamon, MATE utiliza menos recursos. y puede ejecutarse más rápido en computadoras más antiguas.
+    Linux Mint también participa en el desarrollo de MATE, un entorno de escritorio clásico que es la continuación de GNOME 2, el escritorio predeterminado de Linux Mint entre 2006 y 2011. Aunque echa de menos algunas características y su desarrollo es más lento que el de Cinnamon, MATE utiliza menos recursos. y puede ejecutarse más rápido en computadoras más antiguas.
 
-Xfce es un entorno de escritorio liviano. No admite tantas funciones como Cinnamon o MATE, pero es extremadamente estable y muy ligero en el uso de recursos.
+    Xfce es un entorno de escritorio liviano. No admite tantas funciones como Cinnamon o MATE, pero es extremadamente estable y muy ligero en el uso de recursos.
 
-Si no está seguro de qué escritorio elegir, comience con la edición Cinnamon. Pruébalos todos cuando tengas tiempo. Los tres tienen su propia audiencia dentro de la comunidad Linux Mint y todos son muy populares.
+    Si no está seguro de qué escritorio elegir, comience con la edición Cinnamon. Pruébalos todos cuando tengas tiempo. Los tres tienen su propia audiencia dentro de la comunidad Linux Mint y todos son muy populares.
 
-Crear el medio de arranque
+## Crear el medio de arranque
 
-La forma más sencilla de instalar Linux Mint es con una memoria USB.
+    La forma más sencilla de instalar Linux Mint es con una memoria USB. Si no puede iniciar desde USB, puede utilizar un DVD en blanco.
 
-Si no puede iniciar desde USB, puede utilizar un DVD en blanco.
+    Haga clic derecho en el archivo ISO y seleccione Crear memoria USB de arranque , o inicie Menú ‣ Accesorios ‣ Grabador de imágenes USB . Seleccione su dispositivo USB y haga clic en Write.
 
-Haga clic derecho en el archivo ISO y seleccione Crear memoria USB de arranque , o inicie Menú ‣ Accesorios ‣ Grabador de imágenes USB .
-
-Seleccione su dispositivo USB y haga clic en Write .
-
-Postinstalación
+#### Postinstalación
 
 - [Controladores de hardware](https://linuxmint-installation-guide.readthedocs.io/en/latest/drivers.html)
 - [Códecs multimedia](https://linuxmint-installation-guide.readthedocs.io/en/latest/codecs.html)
 - [Ayuda de idioma](https://linuxmint-installation-guide.readthedocs.io/en/latest/locales.html)
 - [Instantáneas del sistema](https://linuxmint-installation-guide.readthedocs.io/en/latest/timeshift.html)
 
-**GParted: una potente herramienta de partición de discos para Linux**
+## Mantener Linux actualizado
 
-[GParted](https://gparted.org/) se erige como una formidable herramienta de partición de discos en el ecosistema Linux y ofrece a los usuarios una solución sólida y fácil de usar para administrar particiones de discos en sus sistemas. Con su naturaleza de código abierto y una amplia gama de funciones, GParted se ha convertido en una herramienta de referencia tanto para principiantes como para usuarios experimentados que buscan una gestión eficiente del disco.
+Ejecutando los siguientes comandos en el terminal:
 
-![gparted-main-window.png](assets/gparted-main-window.png)
+* sudo apt-get update
+* sudo apt-get upgrade
+* sudo apt-get dist-upgrade
+* sudo apt-get autoremove
+* sudo apt-get autoclean
+* sudo apt-get autopurge
+* sudo apt-get autoremove
+
+
+
+###### GParted
+
+[GParted](https://gparted.org/): una potente herramienta de partición de discos para Linux. Una formidable herramienta de partición de discos en el ecosistema Linux y ofrece a los usuarios una solución sólida y fácil de usar para administrar particiones de discos en sus sistemas. Con su naturaleza de código abierto y una amplia gama de funciones, GParted se ha convertido en una herramienta de referencia tanto para principiantes como para usuarios experimentados que buscan una gestión eficiente del disco.
+
+<img title="" src="assets/gparted-main-window.png" alt="gparted-main-window.png" width="496">
 
 Características de GParted:
 
@@ -79,12 +91,3 @@ Usando GParted:
 Comunidad y soporte
 
 GParted cuenta con una comunidad activa y solidaria, y los usuarios pueden encontrar documentación, tutoriales y foros en el [sitio web oficial de GParted](https://gparted.org/) . El sitio web sirve como un recurso valioso tanto para usuarios nuevos como para usuarios experimentados, ofreciendo orientación sobre el uso eficaz de la herramienta y la solución de problemas comunes.
-
-Mantener Linux actualizado
-
-Ejecutando los siguientes comandos en el terminal:
-
-- sudo apt-get update
-- sudo apt-get upgrade
-- sudo apt-get dist-upgrade
-- sudo apt-get autoremove

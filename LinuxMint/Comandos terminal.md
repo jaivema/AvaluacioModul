@@ -1,6 +1,6 @@
-COMANDOS LINUX
+# COMANDOS TERMINAL LINUX
 
-permisos
+#### Permisos
 
 Lectura        Escritura        Ejecución
 
@@ -32,45 +32,65 @@ drwxrwxrwx    'd' directorio
 
 3er bloque de 3 -> resto de usuarios
 
-*Los archivos creados en Linux p  or defecto no tienen permiso de ejecutar
+> Los archivos creados en Linux por defecto no tienen permiso de ejecutar
 
--–help Sirve para todos los comandos, indica todas las variantes
+---
 
-./[programa bash]: para ejecutar el programa
+## Comandos en linea
 
-./nombre del script Sirve para ejecutar el programa
+**-–help** Sirve para todos los comandos, indica todas las variantes
 
-addgroup nombre_grupo    Se utiliza para crear un grupo nuevo.    addgroup Pepito
+**./nombredDelBashScrip** Ejecutar el programa
 
-adduser --ingroup [grupo][nuevo usuario]: agregar nuevo usuario al grupo
+**addgroup nombre_grupo** Se utiliza para crear un grupo nuevo.
 
-adduser nombre_usuario [nombre_grupo]:    Se utiliza para añadir un usuario. En ese momento, no solo se creará la cuenta del usuario sino también su directorio de trabajo, un nuevo grupo de trabajo que se llamará igual que el usuario y añadirá una serie de ficheros de configuración al directorio de trabajo del nuevo usuario.    adduser Pepito Invitados.
+> addgroup Pepito
 
-cal mm/aaaa: calendario, después de cal añadir mes y año. Muestra los días de la semana en filas
+**adduser --ingroup grupo nuevo_usuario** Añade nuevo usuario al grupo
 
-cat [archivo]: muestra el contenido de un fichero
+**adduser nombre_usuario nombre_grupo** No solo se creará la cuenta del usuario sino también su directorio de trabajo, un nuevo grupo de trabajo que se llamará igual que el usuario y añadirá una serie de ficheros de configuración al directorio de trabajo del nuevo usuario.
 
-cd .. Para volver al directorio anterior
+> adduser Pepito Invitados.
 
-cd /home/ nos dirige al directorio home dónde dentro deben aparecer todas las carpetas
+**cal mm/aaaa** Calendario. Muestra los días de la semana en filas
 
-cd más el nombre de la carpeta: para acceder a cualquier carpeta
+**cat archivo** Muestra el contenido de un fichero
 
-cd: retroceder al inicio del terminal
+**ls** Lista los directorios y archivos del directorio actual.
 
-chgrp: Cambia el grupo al que pertenece el archivo. || Sintaxis: chgrp nom_grupo nom_archivo.
+> **ls -lsah** Listado completo del directorio actual con detalles en formato humano. Incluyendo los archivos ocultos.
 
-chmod 777 + nombre del script Habilita los permisos para la ejecución del archivo
+**cd ..** Para volver al directorio superior del sistema de carpetas.
 
-chown: Cambia el propietario de un archivo. || Sintaxis: chown nom_propietario nom_archivo.
+**cd carpeta** Accede a cualquier carpeta dentro del sistema de capetas actual
 
-clear: limpia la pantalla, y coloca el prompt al principio de la misma
+> **cd home**
+> 
+> **cd Documentos**
 
-cp archivo /directorio Copia archivo en directorio manteniendo nombre y el original
+**chgrp nom_grupo nom_archivo** Cambia el grupo al que pertenece el archivo
 
-cp archivo1 archivo2 Copia archivo1 como archivo2 (nuevo nombre) manteniendo el original
+**whoami** devuelve su nombre de usuario en la máquina actual
 
-date: muestra fecha actual
+**chmod 777 nombre_del_script** Habilita los permisos para la ejecución del archivo
+
+**chown nom_propietario nom_archivo** Cambia el propietario de un archivo
+
+**ls -la ~/.config** Enumerará un listado del propietario actual y los permisos (si existen).
+
+**chown -R u+w** Cambia el propietario de todo en el directorio de forma recursiva dando permisos de escritura
+
+> chmod -R u+w ~/.config
+
+
+
+**clear**: limpia la pantalla, y coloca el prompt al principio de la misma
+
+**cp archivo /directorio** Copia archivo en el directorio manteniendo
+
+**cp archivo1 archivo2** Copia archivo1 como archivo2 (nuevo nombre) manteniendo el original
+
+**date** Muestra fecha actual
 
 delgroup [nom_grupo]: Se utiliza para eliminar un grupo
 
@@ -100,7 +120,7 @@ history: muestra historial de comandos ejecutados
 
 id: Numero id de un usuario
 
-sudo update-java-alternatives --list
+**sudo update-java-alternatives --list**
 
 > java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
 
@@ -117,10 +137,6 @@ ls -lh: búsqueda de información de todas las carpetas, incluye tamaño del arc
 ls: lista los archivos de un determinado directorio
 
 ls: mostrar el contenido de la carpeta
-
-ls -la ~/.config enumerará el propietario actual y los permisos
-
- ~/.config(si existen)
 
 man + nombre comando  Sirve para ayudarnos en cuanto a la utilidad del comando
 
@@ -178,7 +194,15 @@ sudo apt install tree: instalar tree para ver todo el diagrama
 
 sudo apt update: para actualizar
 
-sudo apt upgrade: para instalar la actualización
+sudo apt list --upgradable: lista los paquetes disponibles para mejorar
+
+sudo apt upgrade: para instalar la mejora de los paquetes
+
+sudo apt-get autoclean: Limpia el sistema de aplicaciones no instaladas y elimina del cache los paquetes .deb con versiones anteriores a los de los programas que hay instalados.
+
+sudo apt autopurge - Borra los archivos de configuración de todo el sistema que dejaron los paquetes eliminados
+
+sudo apt autoremove - Eliminar paquetes de dependencia que ya no son necesarios
 
 sudo nautilus: acceso al navegador de archivos con privilegios de root (requiere contraseña)
 
@@ -196,29 +220,17 @@ sudo apt purge <nombre-del-paquete>
 
 sudo apt-get remove --purge $(deborphan): Cuando instalamos un paquete en las distribuciones Linux (en las que yo conozco), se instalan otros paquetes (dependencias). Si en el futuro desinstalas ese paquete, esas dependencias pueden quedar instaladas en el sistema, aunque no serán usadas por nadie, simplemente ocuparán espacio en disco. Estas dependencias son llamadas paquetes huérfanos.
 
-sudo apt-get autoclean: Limpia el sistema de aplicaciones no instaladas y elimina del cache los paquetes .deb con versiones anteriores a los de los programas que hay instalados.
+uname -r lista las veersiones del kernel instaladas en el sistema. linux-headers-5.15.0-92-generic
 
-jobs muestra los procesos detenidos o suspendidos por la herramienta Ctr+z y el comando fg lo pone en primer plano
+sudo apt install linux-headers-$(uname -r) Instala las dependencias necesarias para nuestro kernel instalado.
 
-    ejemplo
+**jobs** muestra los procesos detenidos o suspendidos por la herramienta Ctr+z y el comando fg lo pone en primer plano
 
-    [1] - Detenido    vim admin_template.pl (dir ahora: ~/Templates)
-
-    [2] + Detenido    vim admin_template.pl (dir ahora: ~/Templates)
-
-**
-
-sudo apt update:para actualizar
-
-sudo apt upgrade:para instalar la actualización 
-
-s: guardar cambios
+> [1] - Detenido    vim admin_template.pl 
+> 
+> [2] + Detenido   vim admin_template.pl 
 
 reboot: inicia el proceso de reinicio
-
-cd /home/: encontrar tu usuario
-
-ls: mostrar el contenido de la carpeta
 
 mkdir y nombre del archivo: crear carpeta
 
@@ -230,17 +242,7 @@ sudo apt install tree: instalar tree para ver todo el diagrama
 
 rm --help l: información de todos los comandos de borrar, se aplica a cualquier comando
 
-ls -lh: búsqueda de información de todas las carpetas, incluye tamaño del archivo
-
-ls -l: búsqueda de información de todas las carpetas
-
-cd ..: retroceder un paso
-
 exit: salir del terminal
-
-cd: retroceder al inicio del terminal
-
-cd más el nombre de la carpeta: para acceder a cualquier carpeta
 
 pwd: ruta actual
 
@@ -249,8 +251,6 @@ history: muestra historial de comandos ejecutados
 df: mirar disco
 
 top: cómo está funcionando el ordenador
-
-reboot: reinicia sistema
 
 shutdown -h now: para parar Ubuntu
 
@@ -262,143 +262,27 @@ kill número de proceso: elimina el proceso
 
 ps -ef: muestra estado del proceso
 
-man ls: muestra el help, aplicable a todos
+**man ls** Muestra el manual del comando *listado*
 
 man man: muestra todos los comandos
 
-Instalar tree
+**nano archivo.txt**: para crear un archivo de texto con el editor *nano*
 
-sudo apt install tree
 
-Crear archivo
 
-nano nombre del archivo.txt: para crear archivo de texto, depende de la extensión creará uno o otro
+**sudo apt install nombre_de_aplicación -s** Instalar aplicaciones desde script
 
-Ctrl x: para guardar cambios
+---
 
-s
-
-enter
-
-Crear script
-
-nano programa: crear programa
-
-echo ‘hola mundo’: editar un texto
-
-Ctrl X: guardar cambios
-
-s
-
-enter
-
-./programa: para ejecutar el programa
-
-Permisos
-
-chmod 770 nombre del programa: para cambiar permisos
-
-El primer dígito define el primer bloque, que corresponde a R (lectura)
-
-El segundo dígito define el segundo bloque, que corresponde a W (escritura)
-
-El tercer dígito define el tercer bloque, que corresponde a X (ejecutar)
-
-enter
-
-ls -l
-
-./programa
-
-enter
-
-Añadir usuario
-
-sudo adduser nombre usuario
-
-pregunta contraseña
-
-rellenar datos
-
-s
-
-Cambiar usuario
-
-su nombre usuario
-
-*Los archivos creados en Linux por defecto no tienen permiso de ejecutar
-
-script bash: todos los comandos se ejecutan en un sólo script
-
-ejemplo: 
-
-nano programa 3
-
-mkdir ejemplo 3
-
-cd ejemplo 3
-
-mkdir a b c
-
-Ctrl x
-
-chmod 777 programa 3
-
-ls
-
-./programa 3
-
-ls
-
-ls -l
-
-Cambiar nombre de archivo
-
-mv nombre archivo espacio más nombre nuevo
-
-Instalar aplicaciones desde script
-
-sudo apt install nombre de aplicación -s
-
-**
-
-Permisos situación rara de gh auth (permiso denegado) - resuelto : desinstalar firefox del snap
-
-ls -la ~/.config enumerará el propietario actual y los permisos
-
- ~/.config(si existen)
-
-El propietario (tercera columna) debe ser su usuario.
-
-Si no es así, hágalo chown -R `whoami` ~/.config
-
-(explicación: whoami devuelve su nombre de usuario en
-
-la máquina actual y -Rcambia todo en el directorio de forma
-
- recursiva)
-
-Luego, asegúrese de que su usuario pueda escribir
-
- en los archivos: chmod -R u+w ~/.config
-
-(explicación: u+w significa "dar permisos de escritura a
-
-mi usuario")
-
-Si chown aparece chmodun mensaje de error que indica
-
- que no tiene permisos, ante ponga el mismo comando con sudo.
-
-Link comando Ubuntu
+Fuentes:
 
 https://www.guia-ubuntu.com/index.php/Comandos
 
-[Reparar paquetes rotos y dependencias incumplidas en Debian y Ubuntu](https://geekland.eu/reparar-paquetes-rotos-linux/)
+## Instalación de aplicaciones
 
-## ¿QUÉ ES UN PAQUETE ROTO?
+### Qué es un paquete roto
 
-En el momento de instalar un paquete puede darse el caso que no se instale correctamente o que no sea compatible con el resto de paquetes. Si esto pasa es posible que no podamos actualizar, instalar ni desinstalar ningún paquete de nuestro sistema operativo. El paquete responsable de que no podamos instalar y desinstalar paquetes es un paquete roto.
+    En el momento de instalar un paquete puede darse el caso que no se instale correctamente o que no sea compatible con el resto de paquetes. Si esto pasa es posible que no podamos actualizar, instalar ni desinstalar ningún paquete de nuestro sistema operativo. El paquete responsable de que no podamos instalar y desinstalar paquetes es un paquete roto.
 
 Los paquetes acostumbran a romperse en los siguientes casos:
 
@@ -410,9 +294,11 @@ Los paquetes acostumbran a romperse en los siguientes casos:
 
 4. Etc.
 
-## ¿QUÉ SON LAS DEPENDENCIAS INCUMPLIDAS?
+#### Qué son las dependencias incumplidas
 
-Al instalar un programa como LibreOffice se instalan multitud de paquetes, pero nosotros solo damos orden de instalar el paquete libreoffice. Esto es así por las dependencias de los paquetes. Es decir:
+[Reparar paquetes rotos y dependencias incumplidas en Debian y Ubuntu](https://geekland.eu/reparar-paquetes-rotos-linux/)
+
+    Al instalar un programa como LibreOffice se instalan multitud de paquetes, pero nosotros solo damos orden de instalar el paquete libreoffice. Esto es así por las dependencias de los paquetes. Es decir:
 
 1. Damos la orden de instalar el paquete libreoffice.
 
@@ -420,66 +306,66 @@ Al instalar un programa como LibreOffice se instalan multitud de paquetes, pero 
 
 3. Las dependencias del paquete libreoffice también pueden tener nuevas dependencias y así sucesivamente.
 
-Por lo tanto, en el momento que se haya instalado el paquete libreoffice y todas las dependencias podremos usar LibreOffice.
+    Por lo tanto, en el momento que se haya instalado el paquete libreoffice y todas las dependencias podremos usar LibreOffice.
 
-En el momento que un paquete requiere una dependencia que no está presente en los repositorios de nuestra distribución se generará una dependencia incumplida y por lo tanto no podremos instalar y usar el programa que estamos instalando. En el caso que tangamos paquetes rotos también se generarán dependencias incumplidas o errores de dependencias.
+    En el momento que un paquete requiere una dependencia que no está presente en los repositorios de nuestra distribución se generará una dependencia incumplida y por lo tanto no podremos instalar y usar el programa que estamos instalando. En el caso que tangamos paquetes rotos también se generarán dependencias incumplidas o errores de dependencias.
 
-## PASOS A SEGUIR PARA REPARAR PAQUETES ROTOS Y SOLUCIONAR DEPENDENCIAS INCUMPLIDAS EN LINUX
+## Pasos a seguir para reparar paquetes rotos y solucionar dependencias incumplidas en Linux
 
-En el caso que tengan paquetes rotos les propongo aplicar alguna de las soluciones que detallaré a continuación.
+    En el caso que tengan paquetes rotos les propongo aplicar alguna de las soluciones que detallaré a continuación.
 
-###### Nota: Al intentar reparar paquetes rotos se nos puede proponer eliminar una gran cantidad de paquetes para solucionar dependencias incumplidas. Por lo tanto, antes de aceptar alguna de las soluciones propuestas lean detenidamente lo que se realizará en el equipo.
+> Nota: Al intentar reparar paquetes rotos se nos puede proponer eliminar una gran cantidad de paquetes para solucionar dependencias incumplidas. Por lo tanto, antes de aceptar alguna de las soluciones propuestas lean detenidamente lo que se realizará en el equipo.
 
 ### Reparar paquetes rotos con dpkg y el gestor de paquetes apt
 
-Lo primero que haremos es intentar configurar paquetes que han sido desempaquetados, pero no configurados. Para ello ejecutaremos el siguiente comando en la terminal:
+    Lo primero que haremos es intentar configurar paquetes que han sido desempaquetados, pero no configurados. Para ello ejecutaremos el siguiente comando en la terminal:
 
 > **sudo dpkg --configure -a**
 
-Si no se soluciona el problema limpiaremos la cache local de paquetes .deb ejecutando los siguiente comando en la terminal:
+    Si no se soluciona el problema limpiaremos la cache local de paquetes .deb ejecutando los siguiente comando en la terminal:
 
 > **sudo apt-get clean && sudo apt-get autoclean**
 
-Acto seguido regeneraremos la cache de los repositorios con el parámetro –fix-missing. De este modo intentaremos detectar y reparar problemas de dependencias en nuestro sistema operativo. Por lo tanto en la terminal ejecutamos el siguiente comando:
+    Acto seguido regeneraremos la cache de los repositorios con el parámetro –fix-missing. De este modo intentaremos detectar y reparar problemas de dependencias en nuestro sistema operativo. Por lo tanto en la terminal ejecutamos el siguiente comando:
 
 > **sudo apt-get update --fix-missing**
 
-Seguidamente usaremos apt para intentar corregir las dependencias rotas. Para ello ejecutaremos el siguiente comando en la terminal:
+    Seguidamente usaremos apt para intentar corregir las dependencias rotas. Para ello ejecutaremos el siguiente comando en la terminal:
 
 > **sudo apt-get install -f**
 
 Después de ejecutar el comando se intentará buscar una solución para solucionar nuestro problema de dependencias incumplidas y paquetes rotos.
 
-En el caso que sigan los problemas borraremos las lock files de apt y dpkg. Para ello ejecutaremos el siguiente comando en la terminal:
+    En el caso que sigan los problemas borraremos las lock files de apt y dpkg. Para ello ejecutaremos el siguiente comando en la terminal:
 
-> **sudo rm /var/lib/apt/lists/lock && sudo rm /var/cache/apt/archives/lock && sudo rm /var/lib/dpkg/lock**
+**sudo rm /var/lib/apt/lists/lock && sudo rm /var/cache/apt/archives/lock && sudo rm /var/lib/dpkg/lock**
 
-###### Nota: Las lock files tienen la función de evitar que 2 o más procesos accedan a los mismos datos.
+> Nota: Las lock files tienen la función de evitar que 2 o más procesos accedan a los mismos datos.
 
-Después de ejecutar este último comando vuelvan a repetir la totalidad de comandos citados en este apartado.
+    Después de ejecutar este último comando vuelvan a repetir la totalidad de comandos citados en este apartado.
 
 ### Reparar paquetes rotos y dependencias con la terminal y dpkg
 
-En el caso que la solución anterior no haya funcionado intentaremos eliminar el paquete roto que está generando problemas. Para ello ejecutaremos el siguiente comando:
+    En el caso que la solución anterior no haya funcionado intentaremos eliminar el paquete roto que está generando problemas. Para ello ejecutaremos el siguiente comando:
 
-> **sudo apt-get remove**
+**sudo apt-get remove**
 
-En el caso que no tengamos éxito averiguaremos el paquete que está generando problemas ejecutando el siguiente comando:
+    En el caso que no tengamos éxito averiguaremos el paquete que está generando problemas ejecutando el siguiente comando:
 
-> **sudo dpkg -l | grep ^..r**
+**sudo dpkg -l | grep ^..r**
 
-Acto seguido ejecutaremos el siguiente comando para intentar forzar la desinstalación del paquete que presenta problemas:
+    Acto seguido ejecutaremos el siguiente comando para intentar forzar la desinstalación del paquete que presenta problemas:
 
-> **sudo dpkg --remove --force-remove--reinstreq nombre_paquete**
+**sudo dpkg --remove --force-remove--reinstreq nombre_paquete**
 
-###### Nota: Deben remplazar nombre_paquete por el paquete roto o que está generando problemas.
+> Nota: Deben remplazar nombre_paquete por el paquete roto o que está generando problemas.
 
-A continuación limpiaremos la cache local de nuestro repositorios ejecutando el siguiente comando:
+    A continuación limpiaremos la cache local de nuestro repositorios ejecutando el siguiente comando:
 
-> **sudo apt-get clean && sudo apt-get autoclean**
+**sudo apt-get clean && sudo apt-get autoclean**
 
-Finalmente intentaremos actualizar nuestro sistema operativo ejecutando el siguiente comando en la terminal:
+    Finalmente intentaremos actualizar nuestro sistema operativo ejecutando el siguiente comando en la terminal:
 
-> **sudo apt-get update && sudo apt-get dist-upgrade**
+**sudo apt-get update && sudo apt-get dist-upgrade**
 
-Si el sistema se actualiza sin problema habremos resuelto el problema de dependencias y paquetes rotos.
+    Si el sistema se actualiza sin problema habremos resuelto el problema de dependencias y paquetes rotos.

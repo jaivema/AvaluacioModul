@@ -68,7 +68,9 @@ sequenceDiagram
 
 **git ls-remote**
 
-    Enumera todas las referencias en el repositorio remoto, incluidas las sucursales. **git remote show [remote_name]**
+    Enumera todas las referencias en el repositorio remoto, incluidas las sucursales. 
+
+**git remote show [remote_name]**
 
     Muestra información sobre el control remoto especificado, incluidas las sucursales remotas.
 
@@ -99,6 +101,14 @@ sequenceDiagram
     Esto puede ser conveniente para una actualización rápida, pero puede provocar fusiones automáticas, lo que podría generar conflictos que deba resolver.
 
 > *git pull origin main*
+
+**git merge**
+
+    Fusionar uno o más ramas dentro de la rama que tienes activa. A continuación avanzará la rama actual al resulta$do de la f$usión.
+
+**git pull request**
+
+    Solicita la revision de lo cambios a fusionar con la rama principal del proyecto. Seguido se debe realizar un merge para realizar la fusión. Esto combinará los cambios de la rama con los cambios existentes en la rama principal (master).
 
 ***git pull*** y ***git fetch*** son dos comandos comúnmente utilizados para actualizar el repositorio local con cambios desde un repositorio remoto. Tienen propósitos similares pero funcionan de maneras ligeramente diferentes.
 
@@ -368,5 +378,4 @@ git push origin master
 - `git checkout -b <nombre_de_la_rama_local> origin/<nombre_de_la_rama_remota>`
   
   - Esto creará una nueva rama local que rastree a la rama remota correspondiente.
-
 - El repositorio local estará actualizado con los cambios más recientes del repositorio remoto.
