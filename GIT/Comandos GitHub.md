@@ -74,7 +74,7 @@ sequenceDiagram
 
     Muestra información sobre el control remoto especificado, incluidas las sucursales remotas.
 
-**git remove origin**
+**git remote remove origin**
 
     Se suele ejecutar después de resolver un clone de otro repositorio *ajeno*. Desvincula del remoto descargado
 
@@ -378,4 +378,5 @@ git push origin master
 - `git checkout -b <nombre_de_la_rama_local> origin/<nombre_de_la_rama_remota>`
   
   - Esto creará una nueva rama local que rastree a la rama remota correspondiente.
+
 - El repositorio local estará actualizado con los cambios más recientes del repositorio remoto.
