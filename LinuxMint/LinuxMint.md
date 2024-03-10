@@ -51,8 +51,6 @@ Ejecutando los siguientes comandos en el terminal:
 * sudo apt-get autopurge
 * sudo apt-get autoremove
 
-
-
 ###### GParted
 
 [GParted](https://gparted.org/): una potente herramienta de partición de discos para Linux. Una formidable herramienta de partición de discos en el ecosistema Linux y ofrece a los usuarios una solución sólida y fácil de usar para administrar particiones de discos en sus sistemas. Con su naturaleza de código abierto y una amplia gama de funciones, GParted se ha convertido en una herramienta de referencia tanto para principiantes como para usuarios experimentados que buscan una gestión eficiente del disco.
