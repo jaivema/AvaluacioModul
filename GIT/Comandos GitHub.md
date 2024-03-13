@@ -1,6 +1,16 @@
 # Comandos por consola de git
 
-#### Comandos principales
+### Git y GitHub
+
+    Un breve comentario: git y GitHub ***no*** son lo mismo. 
+
+    **Git** *<mark>es una herramienta</mark>* de control de versiones de código abierto creada en 2005 por desarrolladores que trabajan en el sistema operativo Linux. 
+
+    **GitHub** *<mark>es una empresa*</mark> fundada en 2008 que fabrica herramientas que se integran con git. No necesitas GitHub para usar git, pero no puedes usar GitHub sin usar git. 
+
+>     Existen muchas otras alternativas a GitHub, como GitLab, BitBucket y soluciones de “alojamiento propio” como gogs y gittea. Todos estos se denominan en git-speak "controles remotos" y todos son completamente opcionales. No necesitas usar un control remoto para usar git, pero hará que compartir tu código con otros sea más fácil.
+
+### Comandos principales
 
 #### Herramientas de repositorio git
 
