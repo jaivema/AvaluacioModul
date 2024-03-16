@@ -144,17 +144,15 @@ s -->> w : reset <file>
 
     Tiene varios usos. Muestra la rama donde estoy.
 
-> **git branch -M** renombra la rama actual en un repositorio. ejemplo cambiar de main a develop
+> **git branch -M** renombra la rama actual en un repositorio. Por ejemplo cambiar de `main` a `develop`.
 > 
-> **git branch -r** lista todas las ramas remotas
+> **git branch -r** lista todas las ramas remotas.
 > 
 > **git branch -r -v** enumera todas las ramas remotas con el último hash de confirmación y el mensaje de confirmación.
 > 
 > **git branch -a** muestra todas las ramas locales y remotas.    
 > 
-> **git branch**
-> 
->     Crea una nueva rama o mueve el HEAD (puntero) a otro commit:
+> **git branch** crea una nueva rama o mueve el HEAD (puntero) a otro commit:
 > 
 > > **git branch -f main HEAD ~ 3** en este ejemplo moveria el puntero a 3 padres atrás.
 > > 
@@ -196,7 +194,11 @@ s -->> w : reset <file>
 
 **Herramientas de interfaz GitHub CLI (gh)**
 
-    `gh` es la interfaz de línea de comandos oficial de GitHub.     GitHub CLI proporciona una forma más fácil de trabajar con GitHub desde la línea de comandos. Permite realizar muchas de las operaciones que normalmente harías a través del sitio web de GitHub, pero desde la terminal.     Con `gh`, puedes realizar tareas como crear y clonar repositorios, abrir y revisar solicitudes de extracción (pull requests), crear y revisar problemas (issues), ver información de repositorios y usuarios, entre otras cosas.     GitHub CLI es una herramienta útil para aquellos que trabajan en proyectos alojados en GitHub y prefieren realizar tareas desde la línea de comandos en lugar del navegador web.
+    `gh` es la interfaz de línea de comandos oficial de GitHub. GitHub CLI proporciona una forma más fácil de trabajar con GitHub desde la línea de comandos. Permite realizar muchas de las operaciones que normalmente harías a través del sitio web de GitHub, pero desde la terminal.     
+
+    Con `gh`, puedes realizar tareas como crear y clonar repositorios, abrir y revisar solicitudes de extracción (pull requests), crear y revisar problemas (issues), ver información de repositorios y usuarios, entre otras cosas.     
+
+    GitHub CLI es una herramienta útil para aquellos que trabajan en proyectos alojados en GitHub y prefieren realizar tareas desde la línea de comandos en lugar del navegador web.
 
 ## Comandos
 
