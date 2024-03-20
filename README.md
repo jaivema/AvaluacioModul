@@ -62,17 +62,23 @@ Durada de la formació associada: 590 hores
     Nivell de qualificació professional: 3
 
 1. **MF0491_3: Programació web en l'entorn client (180 hores).**
-       ● UF1841: Elaboració de documents web mitjançant llenguatges de marques (60
-   hores).
-       ● UF1842: Desenvolupament i reutilització de components de programari i
-   multimèdia mitjançant llenguatges script (90 hores).
-       ● UF1843: Aplicació de tècniques d'usabilitat i accessibilitat en l'entorn client (30
-   hores).
+   
+   - UF1841: Elaboració de documents web mitjançant llenguatges de marques (60
+     hores).
+   
+   - UF1842: Desenvolupament i reutilització de components de programari i
+     multimèdia mitjançant llenguatges script (90 hores).
+   
+   - UF1843: Aplicació de tècniques d'usabilitat i accessibilitat en l'entorn client (30
+     hores).
 
 2. **MF0492_3: Programació web en l'entorn servidor (240 hores).**
-       ● UF1844: Desenvolupament d'aplicacions web en l'entorn servidor (90 hores).
-       ● UF1845: Accés a dades en aplicacions web de l'entorn servidor (90 hores).
-       ● UF1846: Desenvolupament d'aplicacions web distribuïdes (60 hores).
+   
+   - UF1844: Desenvolupament d'aplicacions web en l'entorn servidor (90 hores).
+   
+   - UF1845: Accés a dades en aplicacions web de l'entorn servidor (90 hores).
+   
+   - UF1846: Desenvolupament d'aplicacions web distribuïdes (60 hores).
 
 3. **MF0493_3: Implantació d'aplicacions web en entorns d'internet, intranet i extranet (90
    hores).**
