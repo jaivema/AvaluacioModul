@@ -272,7 +272,7 @@ Los *flags* que recibe pueden ser por ejemplo `-w` o `--web` para ver el r
    
    Al utilizar la opción –all , agrega todos los cambios, incluidos archivos nuevos, modificaciones y eliminaciones, al área de preparación.
 
-3. Crear repositorio remoto de GitHub origin El comando gh repo create testcli –public inicia el proceso de creación del repositorio.
+3. Crear repositorio remoto de GitHub origin El comando `gh repo create testcli –public` inicia el proceso de creación del repositorio.
    
    Después de una ejecución exitosa, recibirá un mensaje de confirmación de que se ha creado el repositorio "*username*/testcli" en GitHub.
 
@@ -284,7 +284,7 @@ Los *flags* que recibe pueden ser por ejemplo `-w` o `--web` para ver el r
 
 5. Vincular local a remoto.
    
-   git remote add origin https://github.com/testcli.git
+   git remote add origin *https://github.com/testcli.git*
    
    Configura el repositorio remoto para tu repositorio Git local. El comando asocia su repositorio Git local con el repositorio GitHub que creó anteriormente. Esto le permite enviar sus confirmaciones locales al repositorio remoto en GitHub.
 
@@ -363,7 +363,7 @@ git push origin master
   
   1. Crear en local una carpeta de trabajo, por ejemplo 'gitrepo' y entrar con `cd gitrepo`. No es necesario el git init.
   
-  2. git clone `https://github.com/jaivema/Reactjs.git` : el clon crea un directorio nombrado como el repositorio clon, `myapp`.
+  2. git clone del repositorio `myapp` ubicado en la url `https://github.com/jaivema/Reactjs.git` : el clon crea un directorio nombrado como el repositorio clon, `myapp`.
      
      1. A veces es necesario indicar la rama >git clone --branch ordersMapping `url`
   
