@@ -174,6 +174,41 @@ s -->> w : reset <file>
 
     El revert se usa en remoto donde otras personas utilizan el mismo repositorio.
 
+**git repo clone**
+
+    Se clonará el repositorio remoto pero si no indico la rama, se clonará la rama master por defecto.
+
+> git repo clone <user/repo>
+
+**git clone --branch**
+
+    Para clonar una rama específica del repositorio remoto.
+
+> git clone --branch <branchname> <remote-repo-url>
+> 
+> git clone -b <branchname> <remote-repo-url>
+
+    Si quiero asegurarme que se ha clonado la rama correcta, ejecutaré el comando `git branch` sobre el directorio clonado y la consola mostrará mostrar la rama.
+
+> Ejemplo:
+> 
+> ```
+> ~/MyProjects$ git clone --branch development https://github.com/username/reponame.git
+>     Clonando en 'reponame'...
+>     remote: Enumerating objects: 3, done.
+>     remote: Counting objects: 100% (3/3), done.
+>     remote: Compressing objects: 100% (2/2), done.
+>     remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+>     Recibiendo objetos: 100% (3/3), listo.
+> 
+> ~/MyProjects$ cd reponame
+> 
+> ~/MyProjects/reponame$ git branch
+> * development    //rama clonada
+> ```
+> 
+> 
+
 #### Tu Identidad
 
     Lo primero que deberás hacer cuando instales Git es establecer tu nombre de usuario y dirección de correo electrónico. Esto es importante porque los "commits" de Git usan esta información, y es introducida de manera inmutable en los commits que envías.
