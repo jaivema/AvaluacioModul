@@ -124,6 +124,12 @@ s -->> w : reset <file>
 
 ***git pull*** y ***git fetch*** son dos comandos comúnmente utilizados para actualizar el repositorio local con cambios desde un repositorio remoto. Tienen propósitos similares pero funcionan de maneras ligeramente diferentes.
 
+**git config pull.rebase false** Git realizará un merge (fusión) de los cambios remotos a tu rama local cuando ejecutes `git pull`. Esto significa que Git creará un nuevo commit de fusión que integre los cambios remotos con tu historial de commits local.
+
+**git config pull.rebase true** Git realizará un rebase de tus cambios locales sobre los cambios remotos al hacer `git pull`. Esto significa que Git intentará aplicar tus commits locales encima de los commits remotos más recientes, reescribiendo la historia de commits local para que parezca que tus cambios se realizaron después de los cambios remotos.
+
+> En resumen, la diferencia principal entre estas dos configuraciones es cómo se integran los cambios remotos en tu rama local: mediante un merge (`false`) o un rebase (`true`). La elección entre una u otra depende de tus preferencias personales y de las prácticas de trabajo en tu equipo de desarrollo.
+
 **git rm --cached archivo.txt**
 
     Esto elimina el archivo del área de preparación *staging-area* y lo quita del seguimiento, pero se queda en el sistema de archivos *working-area*.
@@ -206,8 +212,6 @@ s -->> w : reset <file>
 > ~/MyProjects/reponame$ git branch
 > * development    //rama clonada
 > ```
-> 
-> 
 
 #### Tu Identidad
 
@@ -323,7 +327,7 @@ Los *flags* que recibe pueden ser por ejemplo `-w` o `--web` para ver el r
    
    Configura el repositorio remoto para tu repositorio Git local. El comando asocia su repositorio Git local con el repositorio GitHub que creó anteriormente. Esto le permite enviar sus confirmaciones locales al repositorio remoto en GitHub.
 
-6. Empujar git push origin master. En el paso final, estás enviando tus confirmaciones locales al repositorio remoto en GitHub. El comando git push origin master envía sus cambios a la rama "master" del repositorio remoto. Git enumera los objetos, los cuenta y los escribe en el repositorio remoto, actualizando efectivamente el repositorio de GitHub con sus cambios locales.
+6. Empujar `git push origin master`. En el paso final, estás enviando tus confirmaciones locales al repositorio remoto en GitHub. El comando git push origin master envía sus cambios a la rama "master" del repositorio remoto. Git enumera los objetos, los cuenta y los escribe en el repositorio remoto, actualizando efectivamente el repositorio de GitHub con sus cambios locales.
    
    El resultado muestra el progreso y confirma que la rama "maestra" en GitHub se ha actualizado con los cambios de su repositorio local.
 
