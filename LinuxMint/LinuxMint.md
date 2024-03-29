@@ -2,6 +2,8 @@
 
 [Linux Mint Installation Guide &mdash; Linux Mint Installation Guide documentation](https://linuxmint-installation-guide.readthedocs.io/en/latest/index.html)
 
+Linux Mint es una distribución basada en **Ubuntu**, que a su vez se deriva de Debian. Esto significa una robusta base y compatibilidad con un montón de software, que además, puedes descargar directamente desde su web.
+
 Linux Mint viene en forma de una imagen ISO (un archivo .iso) que se puede usar para crear un DVD de arranque o una memoria USB de arranque.
 
 ###### Elige la edición correcta:
