@@ -221,7 +221,7 @@ s -->> w : reset <file>
 
 > **git config --global user.name** john
 > 
-> **git config --global user.email** "[johndoe@unnamed.com](mailto:johndoe@unnamed.com)"
+> **git config --global user.email** "johndoe@unnamed.com"
 > 
 > **git config --global user.password** token de seguridad.
 > 
