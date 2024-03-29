@@ -7,5 +7,5 @@
 ## Descripción general
 
 * [Contenedor de servlets y marco Spring](https://mossgreen.github.io/Servlet-Containers-and-Spring-Framework/)
-* [Ejemplos de servilletas](https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing)
+* [Ejemplos de servlets](https://drive.google.com/drive/folders/1CEhyfjf1VhEOlZUuewzWu-zxwqzpBVD6?usp=sharing)
 * [Web en pila de servlet](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)

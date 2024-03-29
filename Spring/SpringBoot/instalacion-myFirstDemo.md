@@ -81,7 +81,7 @@ public class HelloRestController {
 
 - Árbol de carpetas y clases:
 
-<img src="file:///home/jaime/Documentos/SpringBoot/assets/TreeProject.png" title="" alt="TreeProject.png" data-align="center">
+<img title="" src="assets/TreeProject.png" alt="TreeProject.png" data-align="center">
 
 5. Ejecutar el proyecto
    
