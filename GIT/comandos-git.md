@@ -2,7 +2,7 @@
 
 ### Git y GitHub
 
-    Un breve comentario: git y GitHub ***no*** son lo mismo. 
+    Un breve comentario: git y GitHub ***NO*** son lo mismo. 
 
     **Git** *es una herramienta* de control de versiones de código abierto creada en 2005 por desarrolladores que trabajan en el sistema operativo Linux. 
 
@@ -346,11 +346,11 @@ El **Staging Area** es una parte fundamental del flujo de trabajo que **actú
 
 Eliminarlos es sencillo con el siguiente comando:
 
-git reset HEAD nombre_de_archivo
+**git reset HEAD nombre_de_archivo**
 
 Si deseas eliminar todos los ficheros del directorio donde te encuentras, el comando sería el siguiente:
 
-git reset HEAD
+**git reset HEAD**
 
 Con el comando *git status* se comprueba que los archivos ya no están en seguimiento.
 

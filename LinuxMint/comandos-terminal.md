@@ -33,7 +33,6 @@ ls -lsha
 4,0K drwxrwxr-x  6 jaime jaime 4,0K mar 20 12:20 Reactjs
 4,0K -rw-rw-r--  1 jaime jaime 3,5K mar 17 11:20 README.md
 4,0K drwxrwxr-x  4 jaime jaime 4,0K mar 23 09:20 Spring
-
 ```
 
 ---
@@ -410,6 +409,20 @@ Proporciona una interfaz fácil de usar para instalar, actualizar, eliminar y ad
 
 > java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
 > java-1.17.0-openjdk-amd64      1711       /usr/lib/jvm/java-1.17.0-openjdk-amd64
+
+**sudo update-alternatives --config java** Muestra una el listado de versiones java para seleccionar
+
+> ```
+> Existen 2 opciones para la alternativa java (que provee /usr/bin/java).
+> 
+>   Selección   Ruta                                         Prioridad  Estado
+> ------------------------------------------------------------
+> * 0            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      modo automático
+>   1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java   1111      modo manual
+>   2            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      modo manual
+> 
+> Pulse <Intro> para mantener el valor por omisión [*] o pulse un número de selección:
+> ```
 
 **sudo apt purge [nombre-del-paquete]** Esta acción es más completa que simplemente eliminar el paquete con `apt remove`, ya que también *elimina cualquier archivo de configuración asociado al paquete*.
 

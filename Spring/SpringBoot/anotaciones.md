@@ -4,7 +4,8 @@
 
 * `@SpringBootApplication`: Esta anotación se utiliza para habilitar la configuración predeterminada de una aplicación Spring Boot.
   
-  * Básicamente, la `@SpringBootApplication`anotación es una combinación de las siguientes tres anotaciones Spring `@Configuration`: `@EnableAutoConfiguration`y `@ComponentScan`.
+  * Básicamente, la `@SpringBootApplication`anotación es una combinación de las siguientes tres anotaciones Spring : 
+    * `@Configuration`, `@EnableAutoConfiguration`y `@ComponentScan`.
 
 ## 2. Clase
 
@@ -34,20 +35,26 @@
 
     En esta tabla, exploraremos algunas de las anotaciones más utilizadas en Spring Boot. Estas anotaciones se pueden utilizar para asignar solicitudes HTTP a métodos de controlador, extraer datos de la solicitud, vincular datos a atributos del modelo y manejar excepciones. Comprender estas anotaciones es esencial para crear aplicaciones Spring Boot que sean confiables, escalables y mantenibles.
 
-| Anotación           | Descripción                                                                                |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| `@Controller`       | Indica que una clase sirve como controlador Spring Boot.                                   |
-| `@RequestMapping`   | Asigna solicitudes HTTP a métodos de controlador.                                          |
-| `@GetMapping`       | Asigna solicitudes HTTP GET a métodos de controlador.                                      |
-| `@PostMapping`      | Asigna solicitudes HTTP POST a métodos de controlador.                                     |
-| `@PutMapping`       | Asigna solicitudes HTTP PUT a métodos de controlador.                                      |
-| `@DeleteMapping`    | Asigna solicitudes HTTP DELETE a métodos de controlador.                                   |
-| `@PathVariable`     | Extrae una variable de la ruta URL.                                                        |
-| `@RequestParam`     | Extrae una variable de la cadena de consulta o del cuerpo de la solicitud.                 |
-| `@ModelAttribute`   | Vincula un parámetro de método a un atributo de modelo.                                    |
-| `@SessionAttribute` | Vincula un parámetro de método a un atributo de sesión.                                    |
-| `@InitBinder`       | Inicializa un enlazador de datos web para un método de controlador específico.             |
-| `@ExceptionHandler` | Maneja las excepciones lanzadas por un método de controlador.                              |
-| `@ResponseStatus`   | Establece el código de estado HTTP para un método de controlador.                          |
-| `@ResponseBody`     | Indica que un método de controlador devuelve un cuerpo de respuesta en lugar de una vista. |
-| `@ControllerAdvice` | Proporciona manejo de excepciones global para los controladores.                           |
+| Anotación                  | Descripción                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------ |
+| `@EnableAutoConfiguration` | Busca todas las clases que tienen *entidad* y relacionado con la *persistencia*.           |
+| `@ComponentScan`           | Busca las clases con anotationes para una funcionalidad a cierta clase o método.           |
+| `@Controller`              | Indica que clase sirve como controlador Spring Boot dentro del modelo vista controlador.   |
+| `@RequestMapping`          | Asigna solicitudes HTTP a métodos de controlador.                                          |
+| `@GetMapping`              | Asigna solicitudes HTTP GET a métodos de controlador.                                      |
+| `@PostMapping`             | Asigna solicitudes HTTP POST a métodos de controlador.                                     |
+| `@PutMapping`              | Asigna solicitudes HTTP PUT a métodos de controlador.                                      |
+| `@DeleteMapping`           | Asigna solicitudes HTTP DELETE a métodos de controlador.                                   |
+| `@PathVariable`            | Extrae una variable de la ruta URL.                                                        |
+| `@RequestParam`            | Extrae una variable de la cadena de consulta o del cuerpo de la solicitud.                 |
+| `@ModelAttribute`          | Vincula un parámetro de método a un atributo de modelo.                                    |
+| `@SessionAttribute`        | Vincula un parámetro de método a un atributo de sesión.                                    |
+| `@InitBinder`              | Inicializa un enlazador de datos web para un método de controlador específico.             |
+| `@ExceptionHandler`        | Maneja las excepciones lanzadas por un método de controlador.                              |
+| `@ResponseStatus`          | Establece el código de estado HTTP para un método de controlador.                          |
+| `@ResponseBody`            | Indica que un método de controlador devuelve un cuerpo de respuesta en lugar de una vista. |
+| `@ControllerAdvice`        | Proporciona manejo de excepciones global para los controladores.                           |
+| `@Service`                 | Componente que tiene la capa de negocio.                                                   |
+| `@Component`               | Categoriza cada uno de los componentes asociándoles un comportamiento.                     |
+| `@Repository`              | Interactiúa con la base de datos.                                                          |
+| `@Autowired`               | Permite inyectar dependencias con otras dentro del marco Spring.                           |
