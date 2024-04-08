@@ -397,6 +397,11 @@ Proporciona una interfaz fácil de usar para instalar, actualizar, eliminar y ad
 
 **sudo apt list --upgradable** Lista los paquetes disponibles para mejorar
 
+**sudo rm -rf [nombre-directorio]**  Permite eliminar archivos y directorios de manera recursiva y sin pedir confirmación, incluso si esos archivos o directorios están protegidos o pertenecen al sistema.
+
+> + `-r`: Especifica que se eliminarán los directorios y su contenido de forma recursiva.
+> + `-f`: Significa "force" (forzar), lo que hace que `rm` elimine los archivos y directorios sin pedir confirmación al usuario, incluso si los archivos son de solo lectura o el usuario no tiene permiso para eliminarlos.
+
 **sudo apt-get autoclean** Limpia el sistema de aplicaciones no instaladas y elimina del cache los paquetes .deb con versiones anteriores a los de los programas que hay instalados.
 
 **sudo apt autopurge** Borra los archivos de configuración de todo el sistema que dejaron los paquetes eliminados
@@ -404,6 +409,8 @@ Proporciona una interfaz fácil de usar para instalar, actualizar, eliminar y ad
 **sudo apt autoremove** Elimina paquetes de dependencia que ya no son necesarios
 
 **sudo apt remove --purge $(deborphan)** Cuando instalamos un paquete en las distribuciones Linux (en las que yo conozco), se instalan otros paquetes (dependencias). Si en el futuro desinstalas ese paquete, esas dependencias pueden quedar instaladas en el sistema, aunque no serán usadas por nadie, simplemente ocuparán espacio en disco. Estas dependencias son llamadas paquetes huérfanos.
+
+> **sudo apt-get remove --purge [nombre-paquete]** Tambien existe este sintaxis para eliminar las dependencias del paquete.
 
 **sudo update-java-alternatives --list** Lista las versiones del java instaladas.
 
