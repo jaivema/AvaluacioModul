@@ -22,7 +22,7 @@ Puedes ponerle el nombre que quieras a esta conexión remota, pero normalmente l
 
 Para asegurarnos de que tienes correctamente configuradas las conexiones remotas, escribe `git remote -v` para listar las direcciones que tienes guardadas. **Derías tener un remoto con nombre 'origin' con la dirección remota de tu fork y otro con el nombre 'upstream' con la dirección del remoto original.**
 
-![fork_clone.svg](/home/jaime/Documentos/AvaluacioModul/GIT/assets/fork_clone.svg)
+![fork_clone.svg](assets/fork_clone.svg)
 
 Resumen:
 
