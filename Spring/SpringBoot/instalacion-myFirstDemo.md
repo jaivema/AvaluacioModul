@@ -18,7 +18,7 @@
    
    <img src="assets/primer-exec.png" title="primer-exec" alt="primer-exec.png" data-align="center">
    
-   Es normal que la página de inicio sea un Error porque no hay ningún controlador configurado.
+   > Es normal que la página de inicio sea un Error porque no hay ningún controlador configurado.
 
 4. Crear controladores web y REST (`@Controller`, `@RestController`) en el directorio de nuestro package:
    
