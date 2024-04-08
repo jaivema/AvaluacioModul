@@ -426,4 +426,4 @@ git push origin master
   
   * Esto creará una nueva rama local que rastree a la rama remota correspondiente.
 
-* El repositorio local estará actualizado con los cambios más recientes del repositorio remoto.
+* El repositorio local estará actualizado con los cambios más recientes del repositorio remoto.****
