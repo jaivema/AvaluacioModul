@@ -16,7 +16,7 @@
 
 #### Herramientas de repositorio git
 
-    `git` es una herramienta de línea de comandos de código abierto que se utiliza para gestionar versiones de código fuente en un repositorio Git.     Con `git`, puedes realizar una variedad de operaciones, como inicializar un nuevo repositorio, realizar seguimiento de cambios en archivos, crear y fusionar ramas, trabajar con repositorios remotos, entre otras cosas.
+    `git` es una herramienta de línea de comandos de código abierto que se utiliza para gestionar versiones de código fuente en un repositorio Git. Con `git`, puedes realizar una variedad de operaciones, como inicializar un nuevo repositorio, realizar seguimiento de cambios en archivos, crear y fusionar ramas, trabajar con repositorios remotos, entre otras cosas.
 
      Es una herramienta fundamental para cualquier desarrollador que trabaje con Git y es ampliamente utilizada en la comunidad de desarrollo de software.
 
@@ -104,7 +104,7 @@ s -->> w : reset <file>
 
     Esto es útil cuando desea inspeccionar los cambios antes de integrarlos en su rama. Le permite revisar los cambios y decidir cuándo y cómo fusionarlos.
 
-> git fetch origin
+> **git fetch origin**
 
 **git pull**
 
@@ -112,11 +112,9 @@ s -->> w : reset <file>
 
     Esto puede ser conveniente para una actualización rápida, pero puede provocar fusiones automáticas, lo que podría generar conflictos que deba resolver.
 
-> *git pull origin main*
-
-**git merge**
-
-    Fusionar uno o más ramas dentro de la rama que tienes activa. A continuación avanzará la rama actual al resulta$do de la f$usión.
+> **git pull origin main**
+> 
+> **git pull upstream <branchname>** se trata de un comando utilizado tras <mark>forkear</mark> un repositorio GitHub y puede ser que tras tu último `pull request` el original haya cambiado. Carga esos cambios a tu local.
 
 **git pull request**
 
@@ -124,11 +122,27 @@ s -->> w : reset <file>
 
 ***git pull*** y ***git fetch*** son dos comandos comúnmente utilizados para actualizar el repositorio local con cambios desde un repositorio remoto. Tienen propósitos similares pero funcionan de maneras ligeramente diferentes.
 
-**git config pull.rebase false** Git realizará un merge (fusión) de los cambios remotos a tu rama local cuando ejecutes `git pull`. Esto significa que Git creará un nuevo commit de fusión que integre los cambios remotos con tu historial de commits local.
+**git merge**
 
-**git config pull.rebase true** Git realizará un rebase de tus cambios locales sobre los cambios remotos al hacer `git pull`. Esto significa que Git intentará aplicar tus commits locales encima de los commits remotos más recientes, reescribiendo la historia de commits local para que parezca que tus cambios se realizaron después de los cambios remotos.
+    Fusionar uno o más ramas dentro de la rama que tienes activa. A continuación avanzará la rama actual al resulta do de la fusión. 
 
-> En resumen, la diferencia principal entre estas dos configuraciones es cómo se integran los cambios remotos en tu rama local: mediante un merge (`false`) o un rebase (`true`). La elección entre una u otra depende de tus preferencias personales y de las prácticas de trabajo en tu equipo de desarrollo.
+    Git combina los cambios de la rama de origen en la rama de destino y *crea un nuevo commit* que representa la fusión de ambos conjuntos de cambios.
+
+    Por lo general, `git merge` se utiliza para integrar cambios entre ramas, como fusionar una rama de desarrollo en una rama principal (por ejemplo, `master` o `main`). Esto permite combinar el trabajo realizado en diferentes ramas en una sola rama, manteniendo un historial de cambios unificado.
+
+**git rebase**
+
+    Se utiliza para reorganizar la historia de un repositorio. En lugar de fusionar ramas, como lo hace `git merge`, `git rebase` vuelve a aplicar cada commit de una rama en la parte superior de otra rama. Esto puede resultar útil para mantener una historia de commits más lineal y limpia.
+
+> **git rebase -i** para realizar un rebase interactivo, lo que te permite reorganizar, editar o combinar commits durante el proceso de rebase.
+> 
+> Puede que en algún momento debas configurar lo que necesites hacer con rebase y ponerlo a `true` o `false`.
+> 
+> **git config pull.rebase false** Git realizará un merge (fusión) de los cambios remotos a tu rama local cuando ejecutes `git pull`. Esto significa que Git creará un nuevo commit de fusión que integre los cambios remotos con tu historial de commits local.
+> 
+> **git config pull.rebase true** Git realizará un rebase de tus cambios locales sobre los cambios remotos al hacer `git pull`. Esto significa que Git intentará aplicar tus commits locales encima de los commits remotos más recientes, reescribiendo la historia de commits local para que parezca que tus cambios se realizaron después de los cambios remotos.
+> 
+> > En resumen, la diferencia principal entre estas dos configuraciones es cómo se integran los cambios remotos en tu rama local: mediante un merge (`false`) o un rebase (`true`). La elección entre una u otra depende de tus preferencias personales y de las prácticas de trabajo en tu equipo de desarrollo.
 
 **git rm --cached archivo.txt**
 
@@ -136,9 +150,13 @@ s -->> w : reset <file>
 
 **git push**
 
-    Carga cambios de las sucursales locales a los respectivos repositorios remotos.
+    Carga cambios de las ramas locales a los respectivos repositorios remotos.
 
-> git push origin master
+> **git push**
+> 
+> **git push origin master**
+> 
+> **git push <remotename> --delete <branchname>** eliminar la rama de tu remoto en GitHub.
 
 **git reset**
 
@@ -150,31 +168,29 @@ s -->> w : reset <file>
 
     Tiene varios usos. Muestra la rama donde estoy.
 
-> **git branch -M** renombra la rama actual en un repositorio. Por ejemplo cambiar de `main` a `develop`.
-> 
-> **git branch -r** lista todas las ramas remotas.
-> 
-> **git branch -r -v** enumera todas las ramas remotas con el último hash de confirmación y el mensaje de confirmación.
-> 
-> **git branch -a** muestra todas las ramas locales y remotas.    
-> 
 > **git branch** crea una nueva rama o mueve el HEAD (puntero) a otro commit:
 > 
 > > **git branch -f main HEAD ~ 3** en este ejemplo moveria el puntero a 3 padres atrás.
 > > 
 > > **git branch -f main C6** en este ejemplo moveria el puntero al commit con hash C6.
+> 
+> **git branch -M** <newnamebranch> renombra la rama actual en un repositorio. Por ejemplo de `main` a `develop`.
+> 
+> **git branch -r** lista todas las ramas remotas.
+> 
+> **git branch -r -v** enumera todas las ramas remotas con el último hash de confirmación y el mensaje de confirmación.
+> 
+> **git branch -a** muestra todas las ramas locales y remotas.
+> 
+> **git branch -d** <branchname> elimina la <mark>rama local</mark>, normalmente se utiliza al terminar el *merge*.
+> 
+> **git push <remotename> --delete <branchname>** eliminar la <mark>rama de tu remoto</mark> en GitHub
 
 **git checkout**
 
     Reemplaza los archivos de trabajo actuales con archivos de una rama.
 
 > **git checkout --track** crea una rama local a partir de una rama remota, las vincula y reemplaza los archivos de trabajo actuales con archivos de esa rama.
-
-**git merge**
-
-    Fusiona archivos de una rama determinada en la rama actual.
-
-**git rebase**
 
 **git revert HEAD**
 
@@ -219,7 +235,7 @@ s -->> w : reset <file>
 
     De nuevo, sólo necesitas hacer esto una vez si especificas la opción `--global`, ya que Git siempre usará esta información para todo lo que hagas en ese sistema. Si quieres sobrescribir esta información con otro nombre o dirección de correo para proyectos específicos, puedes ejecutar el comando sin la opción `--global` cuando estés en ese proyecto.
 
-> **git config --global user.name** john
+> **git config --global user.name** "john"
 > 
 > **git config --global user.email** "johndoe@unnamed.com"
 > 
@@ -227,7 +243,7 @@ s -->> w : reset <file>
 > 
 > **git config --global --unset user.name** Elimina la variable de identidad.
 > 
-> **git config --global --replace user.name** Reemplaza la variable de identidad
+> **git config --global --replace user.name** "newname" Reemplaza la variable de identidad.
 > 
 > **git config --global --list**: Si quieres comprobar tu configuración, puedes usar el comando `git config --list` para mostrar todas las propiedades que Git ha configurado. Incluida la url del repositorio donde apunta.
 
@@ -256,13 +272,15 @@ La estructura de los comandos siguen el mismo patrón `gh <comando> <acción> [
 | config  | Maneja la configuración para gh.                |
 | help    | El comando de ayuda.                            |
 
-`gh auth logout`: Salir de la sesión.
+    Autenticación para enlazar nuestro git de trabajo con la cuenta GitHub. Este método utiliza el explorador y dar permisos.
 
-`gh auth refresh`: Actualizar las credenciales.
+- **gh auth logout** : Salir de la sesión.
 
-`gh auth status`: Verificar el estado de la autenticación.
+- **gh auth refresh** : Actualizar las credenciales.
 
-**gh repo create example --public**
+- **gh auth status** : Verificar el estado de la autenticación.
+
+**gh repo create <reponame> --public**
 
     Inicia el proceso de creación del repositorio origen.
 
@@ -280,150 +298,6 @@ C:\Users\marco\repositorios>cd github-cli
 C:\Users\marco\repositorios>github-cli>
 ```
 
-Para **ver repositorios** utilizamos `gh repo view` seguido del nombre del repositorio de esta forma `usuario/repositorio`. Se puede observar la descripción del repositorio y el contenido del archivo `README.md`.
+    Para **ver repositorios** utilizamos `gh repo view` seguido del nombre del repositorio de esta forma `usuario/repositorio`. Se puede observar la descripción del repositorio y el contenido del archivo `README.md`.
 
-Los *flags* que recibe pueden ser por ejemplo `-w` o `--web` para ver el repositorio en la web. Si no incluye un nombre de repositorio se verá el repositorio que está en el directorio actual.
-
-# Crear repositorio Git
-
-#### Cree repositorios locales/remotos y confirme/envíe
-
-*En estos seis pasos, configurará y enviará un proyecto a un repositorio remoto de GitHub.*
-
-* En primer lugar , inicializa un repositorio Git local con git init , creando un sistema de control de versiones.
-
-* Luego, preparas todos los cambios con git add –all , preparándolos para su confirmación.
-
-* En el paso 3, utiliza elCLI de GitHub para crear un nuevo repositorio público en GitHub.
-
-* El paso 4 implica confirmar los cambios con git commit –all , acompañado de un mensaje de confirmación.
-
-* En el paso 5, configura una conexión al repositorio remoto usando git remoto add origin .
-
-* Finalmente , envía sus cambios locales a GitHub con git push origin master, sincronizando efectivamente sus repositorios locales y remotos.
-1. Inicializa el repositorio Git local
-   
-   Abrir el terminal y llegar a la carpeta donde se necesita crear con git init.
-
-2. Agregar archivos En este paso, utilizará el comando git add –all para preparar todos los cambios en su directorio de trabajo para la siguiente confirmación.
-   
-   La preparación significa que le estás diciendo a Git qué archivos deseas incluir en la próxima confirmación.
-   
-   Al utilizar la opción –all , agrega todos los cambios, incluidos archivos nuevos, modificaciones y eliminaciones, al área de preparación.
-
-3. Crear repositorio remoto de GitHub origin El comando `gh repo create testcli –public` inicia el proceso de creación del repositorio.
-   
-   Después de una ejecución exitosa, recibirá un mensaje de confirmación de que se ha creado el repositorio "*username*/testcli" en GitHub.
-
-4. Commit Con este paso, ha confirmado sus cambios en el repositorio Git local.
-   
-   El comando git commit –all ha confirmado los cambios preparados con un mensaje de confirmación "hola".
-   
-   La respuesta de Git muestra qué archivos se cambiarán, se agregaron inserciones y/o se crearán.
-
-5. Vincular local a remoto.
-   
-   git remote add origin *https://github.com/testcli.git*
-   
-   Configura el repositorio remoto para tu repositorio Git local. El comando asocia su repositorio Git local con el repositorio GitHub que creó anteriormente. Esto le permite enviar sus confirmaciones locales al repositorio remoto en GitHub.
-
-6. Empujar `git push origin master`. En el paso final, estás enviando tus confirmaciones locales al repositorio remoto en GitHub. El comando git push origin master envía sus cambios a la rama "master" del repositorio remoto. Git enumera los objetos, los cuenta y los escribe en el repositorio remoto, actualizando efectivamente el repositorio de GitHub con sus cambios locales.
-   
-   El resultado muestra el progreso y confirma que la rama "maestra" en GitHub se ha actualizado con los cambios de su repositorio local.
-
-# Cómo eliminar archivos de un repositorio Git después de ignorarlos
-
-Afortunadamente, Git ofrece una solución para esto: la capacidad de [ignorar archivos con .gitignore](https://www.arsys.es/blog/git-gitignore) y, posteriormente, eliminarlos del repositorio de manera efectiva. En este artículo, explicaremos **cómo eliminar archivos después de haberlos ignorado** previamente. Aprenderás cómo limpiar tu repositorio de manera eficiente y mantenerlo limpio, lo que es esencial para un flujo de trabajo de desarrollo efectivo.
-
-Como ya vimos, con el archivo *.gitignore*, configuramos las carpetas y archivos que se tienen que ignorar al añadir un repositorio. Si se gestiona correctamente, todo debería funcionar; pero si se agrega material al repositorio que no deseamos, podemos encontrarnos con un par de situaciones:
-
-* El archivo se ha añadido al staging area, pero que no se ha hecho commit a los archivos
-* El archivo o carpeta ya existe en el repositorio porque previamente se hizo commit
-
-## Suprimir el seguimiento de archivos que están sólo en Staging Area
-
-El **Staging Area** es una parte fundamental del flujo de trabajo que **actúa como un área intermedia** entre tu directorio de trabajo local y el repositorio Git. También se le conoce como «index». Su **función principal** es permitirte **seleccionar y preparar los cambios** que deseas incluir en tu próxima confirmación (commit) antes de enviarlos al repositorio.
-
-Eliminarlos es sencillo con el siguiente comando:
-
-**git reset HEAD nombre_de_archivo**
-
-Si deseas eliminar todos los ficheros del directorio donde te encuentras, el comando sería el siguiente:
-
-**git reset HEAD**
-
-Con el comando *git status* se comprueba que los archivos ya no están en seguimiento.
-
-## Suprimir del repositorio archivos ya confirmados (commit)
-
-El principal problema podría venir si quieres eliminar un archivo ya confirmado, o una carpeta con archivos que no corresponden estar en el repositorio. Los archivos a los que hemos realizado commit por primera vez forman parte del repositorio, por lo que quitarlos de ahí, requiere de un paso adicional.
-
-**Nota importante**: Antes de realizar estos pasos, asegúrate de haber hecho una [copia de seguridad de tus datos importantes, ya que este proceso puede ser irreversible.
-
-### Eliminar los archivos del repositorio
-
-Con el comando *rm* podremos borrar los archivos del repositorio, pero si lo ejecutamos tal cual nos eliminará también el archivo de nuestro directorio de trabajo.
-
-Si queremos conservarlo tendríamos que poner lo siguiente:
-
-git rm --cached nombre_archivo
-
-Y si queremos eliminar el directorio y su contenido haríamos esto:
-
-git rm -r --cached nombre_directorio
-
-Con *–cached* mantenemos los ficheros en nuestro directorio de trabajo.
-
-### Verificar que estamos ignorando los archivos con .gitignore
-
-Debemos asegurarnos de que los archivos están siendo ignorados de manera correcta, y esto lo haremos revisando el archivo *.gitignor*e.
-
-### Commit para validar los cambios
-
-Ya con los archivos que no queremos y por tanto ignorados, deberemos confirmar estos cambios. Esto lo haremos situándonos en la carpeta en cuestión e introduciremos el siguiente comando:
-
-git commit -m 'Eliminados archivos no deseados'
-
-### Enviar los cambios al repositorio remoto
-
-El último paso, si tienes un repositorio remoto donde envías código, es trasladar los datos allí y esto lo hacemos con el comando *push*.
-
-git push
-
-Y si tenemos que especificar el repositorio remoto y la rama, sería así:
-
-git push origin master
-
-> Aunque quites los archivos del repositorio se podrán seguir viendo en el histórico, y aunque se pueden quitar del histórico de commits, requiere de otros pasos de mayor complejidad.
-
-# Sufrimiento y dolor
-
-* Actualizar el `origin` sin tener el repositorio en local:
-  
-  1. Crear en local una carpeta de trabajo, por ejemplo 'gitrepo' y entrar con `cd gitrepo`. No es necesario el git init.
-  
-  2. git clone del repositorio `myapp` ubicado en la url `https://github.com/jaivema/Reactjs.git` : el clon crea un directorio nombrado como el repositorio clon, `myapp`.
-     
-     1. A veces es necesario indicar la rama >git clone --branch ordersMapping `url`
-  
-  3. `cd myapp` y editar los ficheros.
-  
-  4. `git add .`para subirlos al stagging area.
-  
-  5. `git commit` para comitearlos al repositorio local.
-  
-  6. `git status` (opcional) Verificar el estado de los cambios.
-  
-  7. `git push` para finalizar.
-
-**(Opcional) Si tengo ramas adicionales y deseo obtenerlas localmente:**
-
-* `git fetch origin`
-  
-  * Esto traerá todas las ramas remotas a tu repositorio local. Luego, puedes crear ramas locales que sigan a las ramas remotas utilizando:
-
-* `git checkout -b <nombre_de_la_rama_local> origin/<nombre_de_la_rama_remota>`
-  
-  * Esto creará una nueva rama local que rastree a la rama remota correspondiente.
-
-* El repositorio local estará actualizado con los cambios más recientes del repositorio remoto.****
+    Los *flags* que recibe pueden ser por ejemplo `-w` o `--web` para ver el repositorio en la web. Si no incluye un nombre de repositorio se verá el repositorio que está en el directorio actual.

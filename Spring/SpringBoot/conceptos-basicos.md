@@ -112,7 +112,7 @@ public class PersonaServiceImpl implements PersonaService{
 
 ## Técnica de programación ORM
 
-    **Object-Relational Mapping** es utilizada para el desarrollo de aplicaciones para mapear objetos de lenguaje de progrmación orientada a objetos a tablas de bases de datos relacionales, que se interactuan utilizando objetos y métodos en lugar de escribiendo consultas. 
+    **Object-Relational Mapping** es utilizada para el desarrollo de aplicaciones para <u>mapear objetos de lenguaje de programación orientada a objetos a tablas de bases de datos relacionales</u>, que se interactuan utilizando objetos y métodos en lugar de escribiendo consultas. 
 
     Interviene entre una clase y una tabla relacional. Por ejemplo, guardando un `Student class` con su id, nombre, apellido, contacto. **Hibernate** es muy utilizado.
 
@@ -136,6 +136,14 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 + Cayenne
 
+## Spring Data JPA
+
+    Es un starter dentro del ecosistema de proyectos *Spring* que simplifica el acceso a bases de datos y la persistencia en general. No es una implementación de JPA; es una capa de abstracción adicional que trabaja junto a *JPA* y otras tecnologías de <u>persistencia</u>.
+
+    Spring Data propociona repositorios *CRUD* predefinidos y soporte para tecnologías de almacenamiento como JPA, MongoDB y Redis
+
+> Spring Data JPA es un proyecto dentro de Spring Data que se centra en facilitar el uso de **JPA**.
+
 ## Especificación JPA
 
 **Java Persistence API** Es desarrolla para la plataforma Java EE.
@@ -148,7 +156,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 + Define el comportamiento.
 
-> JPA es una especificación y ORM es la implementación. La entidad `Student` está especificado por JPA y ORM implementa hacia la base de datos. Hibernate es la herramienta para llevar todos los datos a la table.
+>     JPA es una especificación y ORM es la implementación. La entidad `Student` está especificado por JPA y ORM implementa hacia la base de datos. Hibernate es la herramienta para llevar todos los datos a la table.
 
 ## Hibernate
 
@@ -162,6 +170,14 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 + XML
 
+    **Hibernate y Spring Data JPA** son dos tecnologías relacionadas pero distintas en el ecosistema de Java para trabajar con bases de datos.
+
++ **Hibernate:** Es un framework de mapeo objeto-relacional (ORM) que facilita el mapeo de objetos Java a tablas de bases de datos relacionales y viceversa. Hibernate simplifica las operaciones de bases de datos al permitir que los desarrolladores interactúen con objetos Java en lugar de escribir consultas SQL directamente. Es potente y flexible, pero puede requerir más configuración y manejo manual.
+
++ **Spring Data JPA:** Es parte del conjunto de proyectos Spring Data, que proporciona una capa de abstracción adicional sobre Hibernate (o cualquier otra implementación JPA) para simplificar el acceso a datos en aplicaciones Spring. Spring Data JPA permite reducir la cantidad de código necesario para interactuar con una base de datos al proporcionar repositorios CRUD (crear, leer, actualizar, eliminar) predefinidos basados en interfaces, consultas personalizadas mediante el uso de convenciones de nombres y soporte para consultas nativas.
+
+    En resumen, <mark>Hibernate es una implementación de JPA</mark> que proporciona funcionalidades ORM, mientras que Spring Data JPA simplifica el uso de JPA en aplicaciones Spring al proporcionar una capa de abstracción adicional y facilitar el desarrollo de repositorios de datos. En muchos casos, Spring Data JPA se utiliza junto con Hibernate para aprovechar las ventajas de ambas tecnologías.
+
 ---
 
 > **ORM** -> Mapeo relacional de objetos, una técnica de programación para convertir datos entre sistemas de tipos incompatibles en lenguajes de programación orientados a objetos y bases de datos relacionales.
@@ -171,14 +187,6 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 > **APP** -> Java Persistence API, una especificación para el mapeo relacional de objetos en Java que proporciona una forma estándar de mapear objetos Java a bases de datos relacionales.
 
 ---
-
-## Spring Data JPA
-
-    Es un starter dentro del ecosistema de proyectos *Spring* que simplifica el acceso a bases de datos y la persistencia en general. No es una implementación de JPA; es una capa de abstracción adicional que trabaja junto a *JPA* y otras tecnologías de <u>persistencia</u>.
-
-    Spring Data propociona repositorios *CRUD* predefinidos y soporte para tecnologías de almacenamiento como JPA, MongoDB y Redis
-
-> Spring Data JPA es un proyecto dentro de Spring Data que se centra en facilitar el uso de **JPA**.
 
 ## Thymeleaf
 
