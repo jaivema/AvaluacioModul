@@ -1,6 +1,4 @@
-# Conceptos Spring MVC.
-
-## Dependencias y esteriotipos
+# Conceptos Spring MVC y características.
 
 ```mermaid
 flowchart TD
@@ -22,7 +20,7 @@ flowchart TD
 
 ---
 
-### Dependencias
+## Dependencias
 
 POM.XML -> maven
 
@@ -40,7 +38,7 @@ POM.XML -> maven
 
 + **spring-boot-starter-data-jpa** incluye las dependencias necesarias para usar Spring Data JPA con las bibliotecas de <mark>Hibernate</mark> como implementación de JPA.
 
-### Características de Spring MVC
+## Características de Spring MVC
 
     **Spring MVC** es un framework construido sobre Java Servlet y mejora el desarrollo de aplicaciones web que se ejecutan en contenedores de servlets como Apache Tomcat y es parte de **Spring Framework Core**.
 
@@ -54,7 +52,7 @@ POM.XML -> maven
 
 + Integración con Spring Security, Servlet Async API y tecnologías de visualización como Thymeleaf, FreeMarker, JSP, STL, PDF, Excel, etc.
 
-### Concepto de estereotipos
+## Concepto de estereotipos
 
     Un estereotipo extiende de @Component. Un @Repository es un estereotipo de @Component, que es usado dentro del marco Spring.
 
@@ -106,11 +104,11 @@ public class PersonaServiceImpl implements PersonaService{
 | `@PutMapping`    | Update    | UPDATE | PUT    |
 | `@DeleteMapping` | Delete    | DELETE | DELETE |
 
-## Inyección de dependencias
+### Inyección de dependencias
 
     Es un patrón de software que describe el conjunto de técnicas destinadas a disminuir el acoplamiento entre los componentes y es uno de los principios SOLID.
 
-## Técnica de programación ORM
+### Técnica de programación ORM
 
     **Object-Relational Mapping** es utilizada para el desarrollo de aplicaciones para <u>mapear objetos de lenguaje de programación orientada a objetos a tablas de bases de datos relacionales</u>, que se interactuan utilizando objetos y métodos en lugar de escribiendo consultas. 
 
@@ -144,7 +142,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 > Spring Data JPA es un proyecto dentro de Spring Data que se centra en facilitar el uso de **JPA**.
 
-## Especificación JPA
+### Especificación JPA
 
 **Java Persistence API** Es desarrolla para la plataforma Java EE.
 
@@ -158,7 +156,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 >     JPA es una especificación y ORM es la implementación. La entidad `Student` está especificado por JPA y ORM implementa hacia la base de datos. Hibernate es la herramienta para llevar todos los datos a la table.
 
-## Hibernate
+### Hibernate
 
     Es la herramienta de mapeo objeto-relacionel (ORM), para plataforma Java - también disponible para .Net con el nombre NHibeanate - que facilita el mapeo de atributos entre una base de datos relacional tradicional y el model de objetos de una aplicación; mediante archivos declarativos (XML) o anotaciones (@) en los *beans* de las entidades que lo permitan.
 
@@ -209,3 +207,5 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 + Expresiones de enlace : `@{ ... }`
 
 + Expresiones de fragmentos : `~{ ... }`
+
+---
