@@ -82,6 +82,18 @@ npm install @mui/icons-material
 npm install @mui/lab notistack
 ```
 
+### Evitar la exposición de datos sensibles con entorno local
+
+    El fichero creado es `.env.local` en la raíz del proyecto y contiene la siguiente información de la cuenta OpenWeather:
+
+```
+VITE_API_URL = http://api.openweathermap.org/data/2.5/weather?q=
+VITE_ICON_URL = https://openweathermap.org/img/wn/
+VITE_FLAG_URL = http://openweathermap.org/images/flags/
+```
+
+El token que se proporciona con la cuenta en openweather para consumir su API queda contenida bajo la constate `VITE_API_KEY`
+
 ---
 
 ## Version v0.0.2
@@ -167,3 +179,21 @@ const data = await response.data;
     Desacoplar la lógica onSubmit del componente principal al WeatherForm.jsx.
 
     Obtener la temperatura en Celsius. Antes la mostraba en Kelvin, ahora será en Celsius por defecto.
+
+## Version v0.0.5
+
+* Ahora devuelve el error de '**city not found**' cuando no encuentra la ciudad
+
+* El titulo ahora es **Open Weather App** en lugar de **Weather App**
+
+* Nuevos parámetros meteorológicos:
+  
+  * Temperatura: 9.86 °C
+  
+  * Max: 11.65 °C
+  
+  * Min: 8.23 °C
+  
+  * Humedad: 79 %
+  
+  * Presión atmos.: 1018 mB
