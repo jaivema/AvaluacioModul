@@ -2,6 +2,10 @@
 
 *Bifurcar en gitHub y clonar en local*.
 
+El entrono y arquitectura de trabajo.
+
+<img title="" src="assets/arquitectura_github.svg" alt="arquitectura_github.svg" width="676" data-align="center">
+
 ## Bifurcaciones (forks)
 
     Hasta ahora has creado un proyecto local y lo has subido a GitHub, ¡pero esto es sólo la mitad de la diversión! La otra mitad está con otras personas y otros proyectos.
@@ -22,7 +26,7 @@
 
     Para asegurarnos de que tienes correctamente configuradas las conexiones remotas, escribe `git remote -v` para listar las direcciones que tienes guardadas. **Derías tener un remoto con nombre 'origin' con la dirección remota de tu fork y otro con el nombre 'upstream' con la dirección del remoto original.**
 
-![fork_clone.svg](assets/fork_clone.svg)
+<img title="" src="assets/fork_clone.svg" alt="fork_clone.svg" width="400" data-align="center">
 
 Resumen:
 
