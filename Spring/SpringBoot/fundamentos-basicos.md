@@ -276,7 +276,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 ### JPA - Java Persistence API
 
-    És una <mark>especificación</mark> de Java para gestionar, conservar y acceder a datos relacionales (en una base de datos) en aplicaciones Java y una API estándar para **ORM (tecnología de Mapeo relacional de objetos)** y proporciona una forma de asignar objetos Java a bases de datos relacionales.
+    És una <mark>especificación</mark> de Java para gestionar, conservar y acceder a datos relacionales (en una base de datos) en aplicaciones Java y una API estándar para ORM (tecnología **de Mapeo relacional de objetos**) y proporciona una forma de asignar objetos Java a bases de datos relacionales.
 
     En resumido, JPA se utiliza para interactuar con bases de datos, que proporciona una forma cómoda y potente de realizar operaciones *CRUD* con funciones útiles como almacenamiento en caché, carga diferida y gestión automática de transiciones.
 
@@ -286,7 +286,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 > Datos de interés y guía
 > 
-> + [JPA de datos de primavera](https://spring.io/projects/spring-data-jpa)
+> + [JPA de datos en Spring](https://spring.io/projects/spring-data-jpa)
 > + [Accediendo a datos con JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 
 La dependencia de *data-jpa* para el repositorio Maven tiene la siguiente pinta:
