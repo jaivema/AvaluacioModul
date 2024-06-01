@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html>
+   <head>
+      
+      <script type = "text/javascript">
+         function WebSocketTest() {
+            
+            if ("WebSocket" in window) {
+               alert("WebSocket is supported by your Browser!");
+               
+               // Let us open a web socket
+	       //endpoint: vdhe3r3z55 is no-active, so switch it by yours
+               var ws = new WebSocket("wss://vdhe3r3z55.execute-api.eu-central-1.amazonaws.com/sandbox");
+				
+               ws.onopen = function() {
+                  
+                  // Web Socket is connected, send data using send()
+                  ws.send("Message to send from html-js very simple template");
+                  alert("Message is sent...");
+               };
+				
+               ws.onmessage = function (event) { 
+                  var received_msg = event.data;
+                  alert("Message is received..." + received_msg);
+               };
+				
+               ws.onclose = function() { 
+                  
+                  // websocket is closed.
+                  alert("Connection is closed..."); 
+               };
+            } else {
+              
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+            }
+         }
+      </script>
+		
+   </head>
+   
+   <body>
+      <div id = "sse">
+         <a href = "javascript:WebSocketTest()">Run WebSocket</a>
+      </div>
+      
+   </body>
+</html>
