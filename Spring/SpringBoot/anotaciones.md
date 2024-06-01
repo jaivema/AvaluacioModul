@@ -1,4 +1,4 @@
-# Las @anotaciones en Srping Boot
+# Las @anotaciones en Spring Boot
 
 ## 1. Aplicación
 
@@ -15,9 +15,11 @@
 * `@Repository`: Esta anotación se usa para definir una clase como **repositorio JPA, que se puede usar para realizar operaciones CRUD en una base de datos.**
 * `@Service`: Esta anotación se utiliza para definir una clase como **clase de servicio que define la lógica empresarial.**
 
-## 3. Inyección de dependencia (IoC)
+## 3. Inyección de dependencia
 
 * `@Autowired`: Esta anotación se utiliza para conectar automáticamente un bean desde el contexto de la aplicación Spring a un campo o método de clase. Cuando usamos esta anotación, Spring Boot es responsable de crear la instancia de esa variable, **básicamente administra todo el ciclo de vida del objeto** .
+
+<img title="" src="file:///home/jaime/Documentos/Spring/SpringBoot/assets/autowired.svg" alt="autowired.svg" width="448" data-align="center">
 
 ## 4. APP
 

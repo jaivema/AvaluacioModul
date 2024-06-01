@@ -32,7 +32,7 @@
 
     Un estereotipo extiende de @Component. Un @Repository es un estereotipo de @Component, que es usado dentro del marco Spring.
 
-+ `@Component` : Es el padre, del que heredan `service`, `@Repository` y `@Controller`, llamados elementos de estereotipo.
++ `@Component` : Es el padre, del que heredan `@Service`, `@Repository` y `@Controller`, llamados elementos de estereotipo.
 
 + `@Repository` : Es el estereotipo que se encarga de dar alta un bean para que implemente el patrón repositorio. Al marcar el bean con esa anotación, Sprinng aporta servicio de conversión de JDBC a JPA.
 
@@ -42,7 +42,11 @@
 
 + `@Autowired` : Permite inyectar dependencias con otras dentro del marco de Spring. Desde *Controller* se utiliza un servicio mediante *Autowired* y desde *Service* se utiliza un repositorio mediante el *Autowired*.
 
+![marcoSpring.svg](/home/jaime/Documentos/Spring/SpringBoot/assets/marcoSpring.svg)
+
 # Spring MVC - Características
+
+![mvc2.png](/home/jaime/Documentos/Spring/SpringBoot/assets/mvc2.png)
 
     **Spring MVC** es un framework construido sobre Java Servlet y mejora el desarrollo de aplicaciones web que se ejecutan en contenedores de servlets como Apache Tomcat y es parte de **Spring Framework Core**.
 
@@ -62,7 +66,7 @@
 
 *Ciclo de solicitud-respuesta de Spring Boot*
 
-![](/home/jaime/Documentos/AvaluacioModul/Spring/SpringBoot/assets/ArquitecturaModel.jpg)
+![](assets/ArquitecturaModel.jpg)
 
     En Spring Boot se llama *modelo* a una clase Java. Define la estructura de los datos que se pasarán entre las diferentes capas de la aplicación y se suelen anotar como @Entiry o @Data como estereotipo del modelo de datos.
 
@@ -282,7 +286,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 *Ciclo de solicitud-respuesta de Spring Boot*
 
-<img title="" src="file:///home/jaime/Documentos/AvaluacioModul/Spring/SpringBoot/assets/jpa_di.svg" alt="jpa_di.svg" width="607" data-align="center">
+<img title="" src="file:///home/jaime/Documentos/Spring/SpringBoot/assets/jpa_di.svg" alt="jpa_di.svg" width="607" data-align="center">
 
 > Datos de interés y guía
 > 
@@ -397,3 +401,5 @@ POM.XML -> maven
 + ~{…} : expresiones de fragmentos.
 
 + __{...} : usa un elemento dentro de otro
+  
+  ![ArquitecturaView.svg](/home/jaime/Documentos/Spring/SpringBoot/assets/ArquitecturaView.svg)
