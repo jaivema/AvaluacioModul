@@ -10,7 +10,9 @@ Linux Mint viene en forma de una imagen ISO (un archivo .iso) que se puede usar 
 
 Puede descargar Linux Mint desde el [sitio web de Linux Mint](https://linuxmint.com/download.php) .
 
-## ¿Canela, MATE o Xfce?[](https://linuxmint-installation-guide.readthedocs.io/en/latest/choose.html#cinnamon-mate-or-xfce "Enlace permanente a este encabezado")
+## ¿Canela, MATE o Xfce?
+
+### [Choose the right edition](https://linuxmint-installation-guide.readthedocs.io/en/latest/choose.html#cinnamon-mate-or-xfce "Enlace permanente a este encabezado")
 
 Linux Mint viene en 3 versiones diferentes, cada una con un entorno de escritorio diferente.
 
@@ -62,31 +64,31 @@ Ejecutando los siguientes comandos en el terminal:
 Características de GParted:
 
 1. **Cambio de tamaño y movimiento de particiones**
-   - GParted permite a los usuarios cambiar el tamaño, mover y manipular particiones sin esfuerzo. Ya sea que necesite expandir una partición para acomodar más datos o reorganizar particiones existentes, GParted proporciona una interfaz sencilla para llevar a cabo estas tareas.
+    - GParted permite a los usuarios cambiar el tamaño, mover y manipular particiones sin esfuerzo. Ya sea que necesite expandir una partición para acomodar más datos o reorganizar particiones existentes, GParted proporciona una interfaz sencilla para llevar a cabo estas tareas.
 2. **Soporte del sistema de archivos**
-   - La herramienta admite una variedad de sistemas de archivos, incluidos ext2, ext3, ext4, FAT16, FAT32, NTFS y más. Esta amplia compatibilidad garantiza que GParted se pueda utilizar en una amplia gama de dispositivos y sistemas de almacenamiento.
+    - La herramienta admite una variedad de sistemas de archivos, incluidos ext2, ext3, ext4, FAT16, FAT32, NTFS y más. Esta amplia compatibilidad garantiza que GParted se pueda utilizar en una amplia gama de dispositivos y sistemas de almacenamiento.
 3. **Crear y eliminar particiones**
-   - Los usuarios pueden crear nuevas particiones o eliminar las existentes según sea necesario. Esta flexibilidad es especialmente valiosa al configurar nuevas unidades, sistemas de arranque dual o reorganizar configuraciones de almacenamiento.
+    - Los usuarios pueden crear nuevas particiones o eliminar las existentes según sea necesario. Esta flexibilidad es especialmente valiosa al configurar nuevas unidades, sistemas de arranque dual o reorganizar configuraciones de almacenamiento.
 4. **Verificar y reparar sistemas de archivos**
-   - GParted incluye herramientas para verificar y reparar sistemas de archivos, asegurando la integridad de los datos en las particiones. Esta característica es esencial para mantener un entorno de almacenamiento saludable y prevenir la corrupción de datos.
+    - GParted incluye herramientas para verificar y reparar sistemas de archivos, asegurando la integridad de los datos en las particiones. Esta característica es esencial para mantener un entorno de almacenamiento saludable y prevenir la corrupción de datos.
 
 Usando GParted:
 
 1. **Instalación**
    
-   - GParted suele estar disponible en los repositorios de software de las principales distribuciones de Linux. Los usuarios pueden instalarlo usando su administrador de paquetes. Para sistemas basados ​​en Ubuntu, el comando es:
-     
-     ```
-     sudo apt-get install gparted
-     ```
+    - GParted suele estar disponible en los repositorios de software de las principales distribuciones de Linux. Los usuarios pueden instalarlo usando su administrador de paquetes. Para sistemas basados ​​en Ubuntu, el comando es:
+      
+      ```
+      sudo apt-get install gparted
+      ```
 
 2. **Lanzando GParted**
    
-   - Después de la instalación, GParted se puede iniciar desde el menú de la aplicación o ejecutando el comando `gparted`en la terminal.
+    - Después de la instalación, GParted se puede iniciar desde el menú de la aplicación o ejecutando el comando `gparted`en la terminal.
 
 3. **Interfaz gráfica de usuario**
    
-   - GParted proporciona una interfaz gráfica de usuario que muestra una representación visual de las particiones del disco, lo que facilita a los usuarios comprender y administrar su configuración de almacenamiento.
+    - GParted proporciona una interfaz gráfica de usuario que muestra una representación visual de las particiones del disco, lo que facilita a los usuarios comprender y administrar su configuración de almacenamiento.
 
 Comunidad y soporte
 
