@@ -42,11 +42,11 @@
 
 + `@Autowired` : Permite inyectar dependencias con otras dentro del marco de Spring. Desde *Controller* se utiliza un servicio mediante *Autowired* y desde *Service* se utiliza un repositorio mediante el *Autowired*.
 
-![marcoSpring.svg](/home/jaime/Documentos/Spring/SpringBoot/assets/marcoSpring.svg)
+![marcoSpring.svg](assets/47b09360b30dbbd2fe22b82c3e0a8e43dd91d2e3.svg)
 
 # Spring MVC - Características
 
-![mvc2.png](/home/jaime/Documentos/Spring/SpringBoot/assets/mvc2.png)
+![mvc2.png](assets/ef1aa006806abf79694b080bd3bb0e73ac5fae55.png)
 
     **Spring MVC** es un framework construido sobre Java Servlet y mejora el desarrollo de aplicaciones web que se ejecutan en contenedores de servlets como Apache Tomcat y es parte de **Spring Framework Core**.
 
@@ -286,7 +286,7 @@ Algunas herramientas que ofrecen **implementaciones** de ORM :
 
 *Ciclo de solicitud-respuesta de Spring Boot*
 
-<img title="" src="file:///home/jaime/Documentos/Spring/SpringBoot/assets/jpa_di.svg" alt="jpa_di.svg" width="607" data-align="center">
+<img title="" src="assets/b78a55c86020ddac3894b49b0c4124dd6a9449d0.svg" alt="jpa_di.svg" width="607" data-align="center">
 
 > Datos de interés y guía
 > 
@@ -318,29 +318,29 @@ La dependencia de *data-jpa* para el repositorio Maven tiene la siguiente pinta:
 ### Las anotaciones usadas en JPA
 
 + `@Entity`
-  + Especifica que la clase es una entidad y será administrada por EntityManager.
+   + Especifica que la clase es una entidad y será administrada por EntityManager.
 + `@Table`
-  + Especifica el nombre de la tabla de base de datos para la entidad.
+   + Especifica el nombre de la tabla de base de datos para la entidad.
 + `@Id`
-  + Especifica el campo de clave principal de la entidad.
+   + Especifica el campo de clave principal de la entidad.
 + `@GeneratedValue`
-  + Especifica cómo se debe generar la clave principal.
+   + Especifica cómo se debe generar la clave principal.
 + `@Column`
-  + Especifica el nombre de la columna de la base de datos para un campo.
+   + Especifica el nombre de la columna de la base de datos para un campo.
 + `@JoinColumn`
-  + Especifica la columna de unión cuando se utiliza una relación.
+   + Especifica la columna de unión cuando se utiliza una relación.
 + `@OneToMany`
-  + Define una relación de uno a muchos entre dos entidades.
+   + Define una relación de uno a muchos entre dos entidades.
 + `@ManyToOne`
-  + Define una relación de muchos a uno entre dos entidades.
+   + Define una relación de muchos a uno entre dos entidades.
 + `@ManyToMany`
-  + Define una relación de muchos a muchos entre dos entidades.
+   + Define una relación de muchos a muchos entre dos entidades.
 + `@JoinTable`
-  + Especifica la tabla de unión para una relación de muchos a muchos.
+   + Especifica la tabla de unión para una relación de muchos a muchos.
 + `@Embedded`
-  + Especifica que el campo debe asignarse como un objeto incrustado.
+   + Especifica que el campo debe asignarse como un objeto incrustado.
 + `@Transient`
-  + Especifica que el campo no debe persistir en la base de datos.
+   + Especifica que el campo no debe persistir en la base de datos.
 
 # Dependencias de un proyecto Spring Boot con Maven
 
@@ -402,4 +402,4 @@ POM.XML -> maven
 
 + __{...} : usa un elemento dentro de otro
   
-  ![ArquitecturaView.svg](/home/jaime/Documentos/Spring/SpringBoot/assets/ArquitecturaView.svg)
+  ![ArquitecturaView.svg](assets/c2be4c65c135b684d65c571a0d7122fa39a94be8.svg)
