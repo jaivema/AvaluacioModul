@@ -19,8 +19,6 @@
 2. Cuando se hace clic en el elemento, alterna una variable de estado que rastrea si se muestra el componente.
 3. Representa condicionalmente el componente según la variable de estado.
 
-
-
 ```js
 import {useState} from 'react';
 
@@ -59,21 +57,17 @@ function Box() {
     </div>
   );
 }
-
 ```
 
     Usamos el gancho [useState](https://react.dev/reference/react/useState) para realizar un seguimiento de una variable de estado booleana que determina si el componente debe mostrarse u ocultarse. El gancho devuelve una matriz que contiene un valor y una función que se utiliza para actualizar el valor.
 
     Pasamos una función `setState`porque se garantiza que la función se invocará con el estado actual (más actualizado).
 
-
-
 ```js
 const handleClick = event => {
   // 👇️ toggle shown state
   setIsShown(current => !current);
 };
-
 ```
 
     Cuando la `setIsShown`variable de estado se establece explícitamente en `true`, el otro componente se muestra sin importar cuántas veces hagamos clic en el botón.
@@ -137,7 +131,6 @@ function Box() {
     </div>
   );
 }
-
 ```
 
 > Si la expresión a la izquierda del signo de interrogación es verdadera, el operador devuelve el valor a la izquierda de los dos puntos; de lo contrario, se devuelve el valor a la derecha de los dos puntos.
@@ -174,7 +167,6 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
     Si el nuevo estado se calcula utilizando el estado anterior, puede pasarle una función `setState()`.
@@ -187,7 +179,6 @@ console.log(result1); // 👉️ "yes"
 
 const result2 = 5 === 10 ? 'yes' : 'no';
 console.log(result2); // 👉️ "no"
-
 ```
 
 ## Establecer visualización CSS: ninguna usando clases condicionalmente.
@@ -218,7 +209,6 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
     Y aquí está el `css`que define las clases `display-block`y `display-none` .
@@ -231,7 +221,6 @@ export default function App() {
 .display-none {
   display: none;
 }
-
 ```
 
     El fragmento de código logra el mismo resultado usando clases en lugar del `style` accesorio. Si el elemento en el que está configurando la clase también tiene clases diferentes, use una cadena de plantilla.
@@ -260,7 +249,6 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
     La sintaxis de llaves del signo de dólar nos permite evaluar una expresión directamente en la [cadena de plantilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) .
@@ -295,7 +283,6 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
     Usamos el gancho [useState](https://react.dev/reference/react/useState) para almacenar un valor booleano que indica si un elemento debe ser visible o no. Cada vez que se hace clic en el elemento del botón, `isVisible` [se alterna el valor booleano](https://bobbyhadz.com/blog/react-toggle-boolean-state) , pero esto podría activarse de cualquier otra manera.
@@ -336,7 +323,6 @@ export default function App() {
     </div>
   );
 }
-
 ```
 
 Y aquí está el `css`que define las clases `visible`y `hidden`.
@@ -349,7 +335,6 @@ Y aquí está el `css`que define las clases `visible`y `hidden`.
 .hidden {
   visibility: hidden;
 }
-
 ```
 
 E    l fragmento de código anterior logra el mismo resultado usando clases en lugar del `style`accesorio. Si el elemento en el que está configurando la clase también tiene clases diferentes, use una cadena de plantilla.
@@ -378,5 +363,4 @@ export default function App() {
     </div>
   );
 }
-
 ```
