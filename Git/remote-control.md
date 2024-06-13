@@ -1,5 +1,7 @@
 # Remote Control
 
+<img title="" src="assets/0efd5b1bedb0575b68457b914860422235aea313.svg" alt="arquitectura_remote_control.svg" width="438" data-align="center">
+
 ## Crear un repositorio remoto
 
     Si quieres sincronizar tu versión **local** con la que está guardada GitHub.com, primero crea un nuevo repositorio **remoto (remote)** en GitHub.com.
