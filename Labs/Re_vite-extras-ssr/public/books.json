@@ -1,0 +1,27 @@
+[
+    {
+      "title": "El principito",
+      "author": "Antoine de Saint-Exupéry",
+      "publish_year": 1943
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "publish_year": 1949
+    },
+    {
+      "title": "El señor de los anillos",
+      "author": "J.R.R. Tolkien",
+      "publish_year": 1954
+    },
+    {
+      "title": "Fundación",
+      "author": "Isaac Asimov",
+      "publish_year": 1951
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "publish_year": 1965
+    }
+  ]
