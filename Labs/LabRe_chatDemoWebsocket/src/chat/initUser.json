@@ -1,0 +1,11 @@
+{
+    "name": "",
+    "avatar": "",
+    "isConnected": false,
+    "isLogin": false,
+    "userId": "",
+    "chatId": "",
+    "chatSelected": "home",
+    "chats": [],
+    "connectionId": ""
+}
