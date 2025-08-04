@@ -66,8 +66,8 @@ In React, you can leverage the power of WebSockets by using libraries like Socke
 
 [real.web-example repository](https://github.com/mongodb-developer/realm-web-example/tree/master)
 
-![websocket.jpg](.\assets\websocket.jpg)
+![websocket.jpg](./assets/websocket.jpg)
 
 # Components tree
 
-![components_Tree.jpg](.\assets\components_Tree.jpg)
+![components_Tree.jpg](./assets/components_Tree.jpg)
