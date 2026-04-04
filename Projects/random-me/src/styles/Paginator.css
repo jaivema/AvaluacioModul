@@ -1,0 +1,23 @@
+
+#paginator-section{
+    display: flex;
+    justify-content: end;
+    padding:10px;
+    min-height:35px;
+    max-height:35px;
+}
+
+#paginator-buttons{
+    background-color: transparent;
+    color: floralwhite;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    margin-right: 5%;
+}
+
+#paginator-buttons button{
+    width: 30%;
+}

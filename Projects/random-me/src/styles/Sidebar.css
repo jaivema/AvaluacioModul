@@ -1,0 +1,59 @@
+#sidebar {
+    display:flex;
+    flex-direction:column;
+    padding: 5px;
+    max-width:40%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#sidebar-header {
+    border: 3px double #206b0d;
+    border-radius: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    background: floralwhite;
+}
+
+#sidebar-items {
+    overflow:auto;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: transparent;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.custom-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#custom-input {
+    font-size: 18px;
+    width: 100%;
+    background-color: rgb(163, 239, 163);
+    color: #206b0d;
+    text-align: center;
+    height: 50px;
+}
+
+.custom-number-buttons{
+    display:flex;    
+    flex-direction: column;
+    align-items: "center";
+    justify-content: "center";
+    width: 75%;
+    height: 100%;
+}
